@@ -892,6 +892,36 @@
                                 5. Magnets can attract or repel metal objects using <input type="text" id="c21-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">, which is a non-contact force.
                             </p>
                         </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. When surfaces rub together and slow down movement, this is called <input type="text" id="c21-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. A <input type="text" id="c21-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force requires objects to touch each other to work.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. The force that makes a balloon stick to a wall after rubbing it is <input type="text" id="c21-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Magnets use <input type="text" id="c21-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> to attract or repel objects without touching them.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. When you drop something and it falls to the ground, <input type="text" id="c21-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> is pulling it down.
+                            </p>
+                        </div>
                     </div>
 
                     <button class="btn btn-check" onclick="checkC21FillBlanks()">Check My Answers!</button>
@@ -982,6 +1012,121 @@
 
                     <button class="btn btn-check" onclick="checkC22Activity()">Check My Matches!</button>
                     <div id="c22-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
+                    <h3>🎯 Activity 2: Drag & Drop - Methods of Force!</h3>
+                    <p>Drag each example to the correct method of applying force!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c22-drag-items">
+                        <div class="drag-item" draggable="true" data-category="direct">👐 Pushing door with hands</div>
+                        <div class="drag-item" draggable="true" data-category="tool">🏏 Hitting ball with bat</div>
+                        <div class="drag-item" draggable="true" data-category="air">💨 Blowing out candles</div>
+                        <div class="drag-item" draggable="true" data-category="magnetic">🧲 Moving paperclips with magnet</div>
+                        <div class="drag-item" draggable="true" data-category="machine">⚙️ Using pulley to lift box</div>
+                        <div class="drag-item" draggable="true" data-category="tool">🔨 Hammering a nail</div>
+                        <div class="drag-item" draggable="true" data-category="air">🎈 Balloon moving from air</div>
+                        <div class="drag-item" draggable="true" data-category="direct">✋ Catching a ball</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.3rem;">👐 Direct Contact</h4>
+                            <div class="drop-zone" data-category="direct"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #EC4899; font-size: 1.3rem;">🔨 Using Tools</h4>
+                            <div class="drop-zone" data-category="tool"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #F59E0B; font-size: 1.3rem;">💨 Air Pressure</h4>
+                            <div class="drop-zone" data-category="air"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #10B981; font-size: 1.3rem;">⚙️ Machines</h4>
+                            <div class="drop-zone" data-category="machine"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #A855F7; font-size: 1.3rem;">🧲 Magnetic Force</h4>
+                            <div class="drop-zone" data-category="magnetic"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkC22DragDrop()">Check My Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetC22DragDrop()">Reset</button>
+                    </div>
+                    <div id="c22-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
+                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about ways to exert forces!</p>
+                    
+                    <div id="c22-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. When you use a hammer to hit a nail, you are using a <input type="text" id="c22-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> to exert force.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. <input type="text" id="c22-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> is when you push or pull something with your hands or body.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. When you blow on a pinwheel and make it spin, you are using <input type="text" id="c22-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. A <input type="text" id="c22-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> can attract metal objects without touching them.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Simple <input type="text" id="c22-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> like levers and pulleys help us apply force more easily.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. A bat is a <input type="text" id="c22-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> that helps you apply more force to a baseball.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. You can exert force on an object even without <input type="text" id="c22-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> it, using magnets or gravity.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Blowing up a balloon and letting it go uses <input type="text" id="c22-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> from the escaping air.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. When water flows and pushes a water wheel, it uses <input type="text" id="c22-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. When you use a screwdriver to turn a screw, the screwdriver is a <input type="text" id="c22-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> that helps apply force.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkC22FillBlanks()">Check My Answers!</button>
+                    <div id="c22-fillblank-feedback" class="feedback"></div>
                 </div>
 
                 <div class="quiz-box">
@@ -1158,6 +1303,36 @@
                                 5. To change the <input type="text" id="c23-blank5" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> of a moving object, you need to apply a force.
                             </p>
                         </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. A force can make an object start moving, stop moving, change <input type="text" id="c23-blank6" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">, change speed, or change shape.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. If you want a toy car to go faster, you need to apply a <input type="text" id="c23-blank7" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. When you catch a flying ball, you apply a force to make it <input type="text" id="c23-blank8" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Squeezing clay changes its <input type="text" id="c23-blank9" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Forces of different <input type="text" id="c23-blank10" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> will have different effects on objects.
+                            </p>
+                        </div>
                     </div>
 
                     <button class="btn btn-check" onclick="checkC23FillBlanks()">Check My Answers!</button>
@@ -1224,7 +1399,7 @@
                 </div>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity: Find the Forces!</h3>
+                    <h3>🎯 Activity 1: Find the Forces!</h3>
                     <p>Look at each daily activity and identify what type of force is being used!</p>
                     
                     <div id="c24-activities" style="display: grid; gap: 1.5rem; margin: 2rem 0;">
@@ -1258,6 +1433,113 @@
 
                     <button class="btn btn-check" onclick="checkC24Activity()">Check My Answers!</button>
                     <div id="c24-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
+                    <h3>🎯 Activity 2: Drag & Drop - Daily Forces!</h3>
+                    <p>Drag each daily activity to the type of force being used!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c24-drag-items">
+                        <div class="drag-item" draggable="true" data-category="push">🚪 Opening a door</div>
+                        <div class="drag-item" draggable="true" data-category="friction">🚲 Using bike brakes</div>
+                        <div class="drag-item" draggable="true" data-category="push">✏️ Writing with pencil</div>
+                        <div class="drag-item" draggable="true" data-category="gravity">🪜 Climbing stairs</div>
+                        <div class="drag-item" draggable="true" data-category="push">🧹 Sweeping floor</div>
+                        <div class="drag-item" draggable="true" data-category="push">🏀 Bouncing basketball</div>
+                        <div class="drag-item" draggable="true" data-category="friction">🏃 Running (feet on ground)</div>
+                        <div class="drag-item" draggable="true" data-category="gravity">🎒 Carrying backpack</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: #10B981; font-size: 1.3rem;">👐 Push Forces</h4>
+                            <div class="drop-zone" data-category="push"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #EF4444; font-size: 1.3rem;">🧊 Friction Forces</h4>
+                            <div class="drop-zone" data-category="friction"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.3rem;">⬇️ Gravity Forces</h4>
+                            <div class="drop-zone" data-category="gravity"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkC24DragDrop()">Check My Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetC24DragDrop()">Reset</button>
+                    </div>
+                    <div id="c24-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
+                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about forces in daily life!</p>
+                    
+                    <div id="c24-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. When you walk or run, <input type="text" id="c24-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> between your shoes and the ground keeps you from slipping.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Every time you climb stairs, you are working against <input type="text" id="c24-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> to move upward.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. When you write with a pencil, you <input type="text" id="c24-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> the pencil against the paper.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Riding a bike uses <input type="text" id="c24-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> forces when you pedal and friction when you brake.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Opening a door can use either a push force or a <input type="text" id="c24-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. When you brush your teeth, you use a <input type="text" id="c24-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force to move the toothbrush.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. <input type="text" id="c24-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> helps a soccer ball slow down and stop after you kick it.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. When you carry your backpack, you use force to work against <input type="text" id="c24-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Playing catch involves both <input type="text" id="c24-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> the ball and catching it.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. We use <input type="text" id="c24-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> every single day to do almost everything we do.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkC24FillBlanks()">Check My Answers!</button>
+                    <div id="c24-fillblank-feedback" class="feedback"></div>
                 </div>
 
                 <div class="quiz-box">
@@ -1392,6 +1674,112 @@
                     <div id="c11-feedback" class="feedback"></div>
                 </div>
 
+                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
+                    <h3>🎯 Activity 2: Drag & Drop - Natural Forces!</h3>
+                    <p>Drag each natural event to the force that causes it!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c11-drag-items">
+                        <div class="drag-item" draggable="true" data-category="gravity">🍂 Leaves falling from trees</div>
+                        <div class="drag-item" draggable="true" data-category="water">🌊 Waves crashing on beach</div>
+                        <div class="drag-item" draggable="true" data-category="wind">🌪️ Trees bending in storm</div>
+                        <div class="drag-item" draggable="true" data-category="gravity">❄️ Snow weighing down branches</div>
+                        <div class="drag-item" draggable="true" data-category="gravity">🌋 Rocks rolling down hill</div>
+                        <div class="drag-item" draggable="true" data-category="wind">💨 Dust blowing across desert</div>
+                        <div class="drag-item" draggable="true" data-category="gravity">🏔️ Avalanche sliding down mountain</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.3rem;">⬇️ Gravity</h4>
+                            <div class="drop-zone" data-category="gravity"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #3B82F6; font-size: 1.3rem;">💨 Wind Force</h4>
+                            <div class="drop-zone" data-category="wind"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #06B6D4; font-size: 1.3rem;">🌊 Water Force</h4>
+                            <div class="drop-zone" data-category="water"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkC11DragDrop()">Check My Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetC11DragDrop()">Reset</button>
+                    </div>
+                    <div id="c11-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
+                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about natural forces!</p>
+                    
+                    <div id="c11-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. <input type="text" id="c11-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> is a powerful force from nature that can knock down trees and damage buildings.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Strong <input type="text" id="c11-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> from rivers and oceans can erode land and carve valleys.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. <input type="text" id="c11-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> shake the ground and can damage structures.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. We can use <input type="text" id="c11-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force to generate electricity with wind turbines.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. <input type="text" id="c11-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> dams use water flow to create electricity.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Planting <input type="text" id="c11-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> can help reduce erosion from wind and water.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. <input type="text" id="c11-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> systems warn people about dangerous storms and natural disasters.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Building strong <input type="text" id="c11-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> helps protect against earthquakes and strong winds.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. <input type="text" id="c11-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> panels capture the sun's energy to make electricity.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Flood <input type="text" id="c11-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protect areas from water damage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkC11FillBlanks()">Check My Answers!</button>
+                    <div id="c11-fillblank-feedback" class="feedback"></div>
+                </div>
+
                 <div class="quiz-box">
                     <h3>📝 Quiz Time!</h3>
                     <div id="c11-quiz"></div>
@@ -1519,6 +1907,113 @@
 
                     <button class="btn btn-check" onclick="checkC12Activity()">Check My Safety Choices!</button>
                     <div id="c12-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
+                    <h3>🎯 Activity 2: Drag & Drop - Safety Equipment!</h3>
+                    <p>Drag each activity to the safety equipment needed!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c12-drag-items">
+                        <div class="drag-item" draggable="true" data-category="helmet">🚴 Riding a bicycle</div>
+                        <div class="drag-item" draggable="true" data-category="seatbelt">🚗 Riding in a car</div>
+                        <div class="drag-item" draggable="true" data-category="lifejacket">⛵ Going on a boat</div>
+                        <div class="drag-item" draggable="true" data-category="helmet">🛹 Skateboarding</div>
+                        <div class="drag-item" draggable="true" data-category="helmet">⚾ Playing baseball</div>
+                        <div class="drag-item" draggable="true" data-category="helmet">🏗️ Construction work</div>
+                        <div class="drag-item" draggable="true" data-category="helmet">🧗 Rock climbing</div>
+                        <div class="drag-item" draggable="true" data-category="lifejacket">🏊 Swimming in deep water</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: #F59E0B; font-size: 1.3rem;">🪖 Helmet Protection</h4>
+                            <div class="drop-zone" data-category="helmet"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #EF4444; font-size: 1.3rem;">🔒 Seatbelt/Harness</h4>
+                            <div class="drop-zone" data-category="seatbelt"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: #3B82F6; font-size: 1.3rem;">🦺 Life Jacket</h4>
+                            <div class="drop-zone" data-category="lifejacket"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkC12DragDrop()">Check My Matching!</button>
+                        <button class="btn btn-reset" onclick="resetC12DragDrop()">Reset</button>
+                    </div>
+                    <div id="c12-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
+                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about safety and protection!</p>
+                    
+                    <div id="c12-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. A <input type="text" id="c12-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protects your head from impact forces when riding a bike.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. <input type="text" id="c12-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> keep you safe in a car by holding you in place during crashes.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. Life <input type="text" id="c12-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> help you float and stay safe in water.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. <input type="text" id="c12-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> cushion the impact when you fall during sports.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Safety <input type="text" id="c12-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protect your eyes from flying objects or chemicals.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Wearing the right safety <input type="text" id="c12-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> can prevent injuries from harmful forces.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Car <input type="text" id="c12-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> inflate during crashes to protect passengers from impact forces.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Knee and elbow <input type="text" id="c12-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protect you when skateboarding or rollerblading.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Always wear <input type="text" id="c12-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> equipment when doing dangerous activities.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. <input type="text" id="c12-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> protect construction workers from falling objects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkC12FillBlanks()">Check My Answers!</button>
+                    <div id="c12-fillblank-feedback" class="feedback"></div>
                 </div>
 
                 <div class="quiz-box">
@@ -2240,6 +2735,386 @@
             feedback.textContent = correct === total ? 
                 `🛡️ Perfect! You know how to stay safe!` : 
                 `You got ${correct} out of ${total} correct. Think about what protects you best!`;
+        }
+
+        // C2.1 - Update fill-in-blank answers to include 10 questions
+        const c21BlankAnswers = {
+            'c21-blank1': ['contact', 'Contact'],
+            'c21-blank2': ['gravity', 'Gravity'],
+            'c21-blank3': ['static electricity', 'Static Electricity', 'static', 'Static'],
+            'c21-blank4': ['friction', 'Friction'],
+            'c21-blank5': ['magnetism', 'Magnetism', 'magnetic force', 'Magnetic Force'],
+            'c21-blank6': ['friction', 'Friction'],
+            'c21-blank7': ['contact', 'Contact'],
+            'c21-blank8': ['static electricity', 'Static Electricity', 'static', 'Static'],
+            'c21-blank9': ['magnetism', 'Magnetism', 'magnetic force', 'Magnetic Force'],
+            'c21-blank10': ['gravity', 'Gravity']
+        };
+
+        // C2.2 Drag-Drop Functions
+        function checkC22DragDrop() {
+            const dropZones = document.querySelectorAll('#c22 .drop-zone');
+            let correct = 0;
+            let total = 0;
+            
+            dropZones.forEach(zone => {
+                const category = zone.dataset.category;
+                const items = zone.querySelectorAll('.drag-item');
+                
+                items.forEach(item => {
+                    total++;
+                    if (item.dataset.category === category) {
+                        correct++;
+                        item.style.borderColor = '#10B981';
+                    } else {
+                        item.style.borderColor = '#EF4444';
+                    }
+                });
+            });
+            
+            const feedback = document.getElementById('c22-drag-feedback');
+            feedback.className = 'feedback show';
+            
+            if (correct === total && total > 0) {
+                feedback.className = 'feedback correct show';
+                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
+            } else {
+                feedback.className = 'feedback incorrect show';
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
+            }
+        }
+
+        function resetC22DragDrop() {
+            const items = document.querySelectorAll('#c22-drag-items .drag-item');
+            const container = document.getElementById('c22-drag-items');
+            
+            items.forEach(item => {
+                item.style.borderColor = '#7C3AED';
+                container.appendChild(item);
+            });
+            
+            document.getElementById('c22-drag-feedback').className = 'feedback';
+        }
+
+        // C2.2 Fill-in-Blanks
+        const c22BlankAnswers = {
+            'c22-blank1': ['tool', 'Tool'],
+            'c22-blank2': ['direct contact', 'Direct Contact', 'Direct contact'],
+            'c22-blank3': ['air pressure', 'Air Pressure', 'Air pressure'],
+            'c22-blank4': ['magnet', 'Magnet'],
+            'c22-blank5': ['machines', 'Machines'],
+            'c22-blank6': ['tool', 'Tool'],
+            'c22-blank7': ['touching', 'Touching'],
+            'c22-blank8': ['force', 'Force', 'pressure', 'Pressure'],
+            'c22-blank9': ['water pressure', 'Water Pressure', 'Water pressure'],
+            'c22-blank10': ['tool', 'Tool', 'lever', 'Lever']
+        };
+
+        function checkC22FillBlanks() {
+            let correct = 0;
+            const total = 10;
+            
+            Object.keys(c22BlankAnswers).forEach(blankId => {
+                const input = document.getElementById(blankId);
+                const userAnswer = input.value.trim();
+                const correctAnswers = c22BlankAnswers[blankId];
+                
+                if (correctAnswers.includes(userAnswer)) {
+                    input.style.borderColor = '#10B981';
+                    input.style.backgroundColor = '#D1FAE5';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#EF4444';
+                    input.style.backgroundColor = '#FEE2E2';
+                }
+            });
+            
+            const feedback = document.getElementById('c22-fillblank-feedback');
+            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
+            
+            if (correct === total) {
+                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
+            } else {
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
+            }
+        }
+
+        // C2.3 - Update fill-in-blank answers to include 10 questions  
+        const c23BlankAnswers = {
+            'c23-blank1': ['magnitude', 'Magnitude', 'strength', 'Strength'],
+            'c23-blank2': ['stop', 'Stop'],
+            'c23-blank3': ['bigger', 'Bigger', 'greater', 'Greater', 'larger', 'Larger'],
+            'c23-blank4': ['shape', 'Shape'],
+            'c23-blank5': ['speed', 'Speed', 'direction', 'Direction', 'motion', 'Motion'],
+            'c23-blank6': ['direction', 'Direction'],
+            'c23-blank7': ['bigger', 'Bigger', 'greater', 'Greater', 'stronger', 'Stronger'],
+            'c23-blank8': ['stop', 'Stop'],
+            'c23-blank9': ['shape', 'Shape'],
+            'c23-blank10': ['magnitude', 'Magnitude', 'magnitudes', 'Magnitudes', 'strength', 'Strength', 'size', 'Size']
+        };
+
+        // C2.4 Drag-Drop Functions
+        function checkC24DragDrop() {
+            const dropZones = document.querySelectorAll('#c24 .drop-zone');
+            let correct = 0;
+            let total = 0;
+            
+            dropZones.forEach(zone => {
+                const category = zone.dataset.category;
+                const items = zone.querySelectorAll('.drag-item');
+                
+                items.forEach(item => {
+                    total++;
+                    if (item.dataset.category === category) {
+                        correct++;
+                        item.style.borderColor = '#10B981';
+                    } else {
+                        item.style.borderColor = '#EF4444';
+                    }
+                });
+            });
+            
+            const feedback = document.getElementById('c24-drag-feedback');
+            feedback.className = 'feedback show';
+            
+            if (correct === total && total > 0) {
+                feedback.className = 'feedback correct show';
+                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
+            } else {
+                feedback.className = 'feedback incorrect show';
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
+            }
+        }
+
+        function resetC24DragDrop() {
+            const items = document.querySelectorAll('#c24-drag-items .drag-item');
+            const container = document.getElementById('c24-drag-items');
+            
+            items.forEach(item => {
+                item.style.borderColor = '#7C3AED';
+                container.appendChild(item);
+            });
+            
+            document.getElementById('c24-drag-feedback').className = 'feedback';
+        }
+
+        // C2.4 Fill-in-Blanks
+        const c24BlankAnswers = {
+            'c24-blank1': ['friction', 'Friction'],
+            'c24-blank2': ['gravity', 'Gravity'],
+            'c24-blank3': ['push', 'Push'],
+            'c24-blank4': ['push', 'Push', 'pushing', 'Pushing'],
+            'c24-blank5': ['pull', 'Pull'],
+            'c24-blank6': ['push', 'Push'],
+            'c24-blank7': ['friction', 'Friction'],
+            'c24-blank8': ['gravity', 'Gravity'],
+            'c24-blank9': ['throwing', 'Throwing', 'pushing', 'Pushing'],
+            'c24-blank10': ['forces', 'Forces', 'force', 'Force']
+        };
+
+        function checkC24FillBlanks() {
+            let correct = 0;
+            const total = 10;
+            
+            Object.keys(c24BlankAnswers).forEach(blankId => {
+                const input = document.getElementById(blankId);
+                const userAnswer = input.value.trim();
+                const correctAnswers = c24BlankAnswers[blankId];
+                
+                if (correctAnswers.includes(userAnswer)) {
+                    input.style.borderColor = '#10B981';
+                    input.style.backgroundColor = '#D1FAE5';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#EF4444';
+                    input.style.backgroundColor = '#FEE2E2';
+                }
+            });
+            
+            const feedback = document.getElementById('c24-fillblank-feedback');
+            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
+            
+            if (correct === total) {
+                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
+            } else {
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
+            }
+        }
+
+        // C1.1 Drag-Drop Functions
+        function checkC11DragDrop() {
+            const dropZones = document.querySelectorAll('#c11 .drop-zone');
+            let correct = 0;
+            let total = 0;
+            
+            dropZones.forEach(zone => {
+                const category = zone.dataset.category;
+                const items = zone.querySelectorAll('.drag-item');
+                
+                items.forEach(item => {
+                    total++;
+                    if (item.dataset.category === category) {
+                        correct++;
+                        item.style.borderColor = '#10B981';
+                    } else {
+                        item.style.borderColor = '#EF4444';
+                    }
+                });
+            });
+            
+            const feedback = document.getElementById('c11-drag-feedback');
+            feedback.className = 'feedback show';
+            
+            if (correct === total && total > 0) {
+                feedback.className = 'feedback correct show';
+                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
+            } else {
+                feedback.className = 'feedback incorrect show';
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
+            }
+        }
+
+        function resetC11DragDrop() {
+            const items = document.querySelectorAll('#c11-drag-items .drag-item');
+            const container = document.getElementById('c11-drag-items');
+            
+            items.forEach(item => {
+                item.style.borderColor = '#7C3AED';
+                container.appendChild(item);
+            });
+            
+            document.getElementById('c11-drag-feedback').className = 'feedback';
+        }
+
+        // C1.1 Fill-in-Blanks
+        const c11BlankAnswers = {
+            'c11-blank1': ['wind', 'Wind'],
+            'c11-blank2': ['water', 'Water'],
+            'c11-blank3': ['earthquakes', 'Earthquakes'],
+            'c11-blank4': ['wind', 'Wind'],
+            'c11-blank5': ['hydroelectric', 'Hydroelectric'],
+            'c11-blank6': ['trees', 'Trees'],
+            'c11-blank7': ['warning', 'Warning'],
+            'c11-blank8': ['structures', 'Structures', 'buildings', 'Buildings'],
+            'c11-blank9': ['solar', 'Solar'],
+            'c11-blank10': ['barriers', 'Barriers', 'walls', 'Walls']
+        };
+
+        function checkC11FillBlanks() {
+            let correct = 0;
+            const total = 10;
+            
+            Object.keys(c11BlankAnswers).forEach(blankId => {
+                const input = document.getElementById(blankId);
+                const userAnswer = input.value.trim();
+                const correctAnswers = c11BlankAnswers[blankId];
+                
+                if (correctAnswers.includes(userAnswer)) {
+                    input.style.borderColor = '#10B981';
+                    input.style.backgroundColor = '#D1FAE5';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#EF4444';
+                    input.style.backgroundColor = '#FEE2E2';
+                }
+            });
+            
+            const feedback = document.getElementById('c11-fillblank-feedback');
+            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
+            
+            if (correct === total) {
+                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
+            } else {
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
+            }
+        }
+
+        // C1.2 Drag-Drop Functions
+        function checkC12DragDrop() {
+            const dropZones = document.querySelectorAll('#c12 .drop-zone');
+            let correct = 0;
+            let total = 0;
+            
+            dropZones.forEach(zone => {
+                const category = zone.dataset.category;
+                const items = zone.querySelectorAll('.drag-item');
+                
+                items.forEach(item => {
+                    total++;
+                    if (item.dataset.category === category) {
+                        correct++;
+                        item.style.borderColor = '#10B981';
+                    } else {
+                        item.style.borderColor = '#EF4444';
+                    }
+                });
+            });
+            
+            const feedback = document.getElementById('c12-drag-feedback');
+            feedback.className = 'feedback show';
+            
+            if (correct === total && total > 0) {
+                feedback.className = 'feedback correct show';
+                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
+            } else {
+                feedback.className = 'feedback incorrect show';
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
+            }
+        }
+
+        function resetC12DragDrop() {
+            const items = document.querySelectorAll('#c12-drag-items .drag-item');
+            const container = document.getElementById('c12-drag-items');
+            
+            items.forEach(item => {
+                item.style.borderColor = '#7C3AED';
+                container.appendChild(item);
+            });
+            
+            document.getElementById('c12-drag-feedback').className = 'feedback';
+        }
+
+        // C1.2 Fill-in-Blanks
+        const c12BlankAnswers = {
+            'c12-blank1': ['helmet', 'Helmet'],
+            'c12-blank2': ['seatbelts', 'Seatbelts', 'seatbelt', 'Seatbelt'],
+            'c12-blank3': ['jackets', 'Jackets', 'jacket', 'Jacket'],
+            'c12-blank4': ['airbags', 'Airbags', 'pads', 'Pads', 'padding', 'Padding'],
+            'c12-blank5': ['goggles', 'Goggles', 'glasses', 'Glasses'],
+            'c12-blank6': ['equipment', 'Equipment', 'gear', 'Gear'],
+            'c12-blank7': ['airbags', 'Airbags'],
+            'c12-blank8': ['pads', 'Pads', 'padding', 'Padding'],
+            'c12-blank9': ['safety', 'Safety', 'protective', 'Protective'],
+            'c12-blank10': ['helmets', 'Helmets', 'hard hats', 'Hard Hats', 'Hard hats']
+        };
+
+        function checkC12FillBlanks() {
+            let correct = 0;
+            const total = 10;
+            
+            Object.keys(c12BlankAnswers).forEach(blankId => {
+                const input = document.getElementById(blankId);
+                const userAnswer = input.value.trim();
+                const correctAnswers = c12BlankAnswers[blankId];
+                
+                if (correctAnswers.includes(userAnswer)) {
+                    input.style.borderColor = '#10B981';
+                    input.style.backgroundColor = '#D1FAE5';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#EF4444';
+                    input.style.backgroundColor = '#FEE2E2';
+                }
+            });
+            
+            const feedback = document.getElementById('c12-fillblank-feedback');
+            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
+            
+            if (correct === total) {
+                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
+            } else {
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
+            }
         }
     </script>
 </body>
