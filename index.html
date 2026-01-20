@@ -141,6 +141,63 @@
             top: 0;
             z-index: 100;
             border-bottom: 3px solid #7C3AED;
+            transition: all 0.3s;
+        }
+
+        /* Hide navigation when not on home page */
+        nav.hidden {
+            display: none;
+        }
+
+        /* Back button styles */
+        .back-button {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 101;
+            background: linear-gradient(135deg, #7C3AED, #EC4899);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(124, 58, 237, 0.6);
+        }
+
+        .back-button:active {
+            transform: translateY(-1px);
+        }
+
+        .back-button.show {
+            display: block;
+            animation: slideInLeft 0.5s;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .bottom-back-button {
+            display: none;
+            margin: 3rem auto;
+            padding: 1.5rem 3rem;
+            font-size: 1.3rem;
+            position: relative;
+        }
+
+        .bottom-back-button.show {
+            display: block;
         }
 
         .nav-grid {
@@ -678,6 +735,11 @@
         </div>
     </nav>
 
+    <!-- Back to Home Button (appears when on lesson pages) -->
+    <button class="back-button" id="backButton" onclick="showPage('home', event)">
+        ← Back to Lessons
+    </button>
+
     <div class="container">
         <!-- HOME PAGE -->
         <div id="home" class="page active">
@@ -934,6 +996,12 @@
                     <button class="btn btn-check" onclick="checkQuiz('c21')" style="margin-top: 1.5rem;">Submit Quiz</button>
                     <div id="c21-quiz-score" class="score-display" style="display: none;"></div>
                 </div>
+
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -1134,6 +1202,12 @@
                     <div id="c22-quiz"></div>
                     <button class="btn btn-check" onclick="checkQuiz('c22')" style="margin-top: 1.5rem;">Submit Quiz</button>
                     <div id="c22-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
                 </div>
             </div>
         </div>
@@ -1345,6 +1419,12 @@
                     <button class="btn btn-check" onclick="checkQuiz('c23')" style="margin-top: 1.5rem;">Submit Quiz</button>
                     <div id="c23-quiz-score" class="score-display" style="display: none;"></div>
                 </div>
+
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -1547,6 +1627,12 @@
                     <div id="c24-quiz"></div>
                     <button class="btn btn-check" onclick="checkQuiz('c24')" style="margin-top: 1.5rem;">Submit Quiz</button>
                     <div id="c24-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
                 </div>
             </div>
         </div>
@@ -1786,6 +1872,12 @@
                     <button class="btn btn-check" onclick="checkQuiz('c11')" style="margin-top: 1.5rem;">Submit Quiz</button>
                     <div id="c11-quiz-score" class="score-display" style="display: none;"></div>
                 </div>
+
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -2022,6 +2114,12 @@
                     <button class="btn btn-check" onclick="checkQuiz('c12')" style="margin-top: 1.5rem;">Submit Quiz</button>
                     <div id="c12-quiz-score" class="score-display" style="display: none;"></div>
                 </div>
+
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -2226,6 +2324,23 @@
             document.getElementById(pageId).classList.add('active');
             if (event && event.target) {
                 event.target.classList.add('active');
+            }
+            
+            // Hide/show navigation and back button based on page
+            const nav = document.querySelector('nav');
+            const backButton = document.getElementById('backButton');
+            const bottomBackButtons = document.querySelectorAll('.bottom-back-button');
+            
+            if (pageId === 'home') {
+                // On home page: show nav, hide back buttons
+                nav.classList.remove('hidden');
+                backButton.classList.remove('show');
+                bottomBackButtons.forEach(btn => btn.classList.remove('show'));
+            } else {
+                // On lesson page: hide nav, show back buttons
+                nav.classList.add('hidden');
+                backButton.classList.add('show');
+                bottomBackButtons.forEach(btn => btn.classList.add('show'));
             }
             
             // Load quiz if not already loaded
