@@ -1454,33 +1454,92 @@
         </div>
 
 
-        <!-- D2.3 PAGE - COMPLETE -->
+
+        <!-- D2.3 PAGE - COMPLETE WITH FULL CONTENT -->
         <div id="d23" class="page">
             <div class="card" style="border-color: var(--purple);">
                 <h2>D2.3 - Strength of Structures 💪</h2>
-                <p>Strength is the ability to support a load without breaking!</p>
+                <p><strong>Strength</strong> is a structure's ability to support a load without breaking or bending too much!</p>
+
+                <h3>What Makes Structures Strong? 🏗️</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">📦</div>
+                        <h4>Thicker Materials</h4>
+                        <p>More material = more strength!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🔩</div>
+                        <h4>Stronger Materials</h4>
+                        <p>Steel is stronger than wood!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🔺</div>
+                        <h4>Good Design</h4>
+                        <p>Triangles are the strongest shape!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🏛️</div>
+                        <h4>Support Beams</h4>
+                        <p>Beams spread out the weight!</p>
+                    </div>
+                </div>
+
+                <h3>Strong vs Weak Materials 🔨</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">🔩</div>
+                        <h4>Steel</h4>
+                        <p>Super strong for big buildings!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">🪨</div>
+                        <h4>Concrete</h4>
+                        <p>Strong and lasts a long time!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">🪵</div>
+                        <h4>Wood</h4>
+                        <p>Strong but lighter than steel!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">🧱</div>
+                        <h4>Bricks</h4>
+                        <p>Strong when stacked together!</p>
+                    </div>
+                </div>
+
+                <h3>Ways to Increase Strength 📈</h3>
+                <ul style="font-size: 1.2rem; line-height: 2; margin: 2rem 0;">
+                    <li><strong>Make it thicker:</strong> More material can hold more weight!</li>
+                    <li><strong>Use stronger materials:</strong> Choose steel instead of cardboard!</li>
+                    <li><strong>Add support beams:</strong> Beams help distribute the load!</li>
+                    <li><strong>Use triangular shapes:</strong> Triangles don't collapse easily!</li>
+                    <li><strong>Connect pieces well:</strong> Strong joints keep structures together!</li>
+                </ul>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    <h3>🎯 Activity 1: Drag & Drop - Strong vs Weak!</h3>
+                    <p>Sort these materials and designs by their strength!</p>
                     
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d23-drag-items">
                         <div class="drag-item" draggable="true" data-category="strong">🔩 Steel beam</div>
-                        <div class="drag-item" draggable="true" data-category="strong">🧱 Brick wall</div>
-                        <div class="drag-item" draggable="true" data-category="strong">🏗️ Triangle support</div>
+                        <div class="drag-item" draggable="true" data-category="strong">🧱 Thick brick wall</div>
+                        <div class="drag-item" draggable="true" data-category="strong">🔺 Triangle support</div>
                         <div class="drag-item" draggable="true" data-category="strong">🪨 Stone pillar</div>
-                        <div class="drag-item" draggable="true" data-category="weak">📄 Paper</div>
+                        <div class="drag-item" draggable="true" data-category="weak">📄 Single paper sheet</div>
                         <div class="drag-item" draggable="true" data-category="weak">🧵 Single thread</div>
-                        <div class="drag-item" draggable="true" data-category="weak">🍃 Leaf</div>
-                        <div class="drag-item" draggable="true" data-category="weak">❄️ Ice</div>
+                        <div class="drag-item" draggable="true" data-category="weak">🍃 Dry leaf</div>
+                        <div class="drag-item" draggable="true" data-category="weak">❄️ Thin ice</div>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">💪 STRONG Materials</h4>
                             <div class="drop-zone" data-category="strong"></div>
                         </div>
                         <div>
-                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">🍃 WEAK Materials</h4>
                             <div class="drop-zone" data-category="weak"></div>
                         </div>
                     </div>
@@ -1498,57 +1557,57 @@
                     <div id="d23-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. Fill in: <input type="text" id="d23-blank1" style="width: 200px;">
+                                1. <input type="text" id="d23-blank1" style="width: 180px;"> is the ability to support a load without breaking.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Fill in: <input type="text" id="d23-blank2" style="width: 200px;">
+                                2. Making a material <input type="text" id="d23-blank2" style="width: 180px;"> can increase its strength.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. Fill in: <input type="text" id="d23-blank3" style="width: 200px;">
+                                3. <input type="text" id="d23-blank3" style="width: 150px;"> is one of the strongest building materials.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. Fill in: <input type="text" id="d23-blank4" style="width: 200px;">
+                                4. <input type="text" id="d23-blank4" style="width: 180px;"> are the strongest shape for support structures.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Fill in: <input type="text" id="d23-blank5" style="width: 200px;">
+                                5. A <input type="text" id="d23-blank5" style="width: 150px;"> is the weight that a structure must carry.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Fill in: <input type="text" id="d23-blank6" style="width: 200px;">
+                                6. Stronger <input type="text" id="d23-blank6" style="width: 180px;"> make stronger structures.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. Fill in: <input type="text" id="d23-blank7" style="width: 200px;">
+                                7. <input type="text" id="d23-blank7" style="width: 150px;"> help distribute weight in buildings.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Fill in: <input type="text" id="d23-blank8" style="width: 200px;">
+                                8. Wide bases increase a structure's <input type="text" id="d23-blank8" style="width: 180px;">.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Fill in: <input type="text" id="d23-blank9" style="width: 200px;">
+                                9. Good <input type="text" id="d23-blank9" style="width: 150px;"> affects how strong a structure is.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Fill in: <input type="text" id="d23-blank10" style="width: 200px;">
+                                10. Engineers test structures to ensure they're <input type="text" id="d23-blank10" style="width: 180px;"> enough.
                             </p>
                         </div>
                     </div>
 
-                    <button class="btn btn-check" onclick="checkD23FillBlanks()">Check Answers!</button>
+                    <button class="btn btn-check" onclick="checkD23FillBlanks()">Check My Answers!</button>
                     <div id="d23-fillblank-feedback" class="feedback"></div>
                 </div>
 
@@ -1567,14 +1626,72 @@
             </div>
         </div>
 
-        <!-- D2.4 PAGE - COMPLETE -->
+        <!-- D2.4 PAGE - COMPLETE WITH FULL CONTENT -->
         <div id="d24" class="page">
             <div class="card" style="border-color: var(--orange);">
                 <h2>D2.4 - Stability ⚖️</h2>
-                <p>Stability means keeping balance and not tipping over!</p>
+                <p><strong>Stability</strong> means a structure can keep its balance and not tip over!</p>
+
+                <h3>What Makes Structures Stable? ⚖️</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🔺</div>
+                        <h4>Wide Base</h4>
+                        <p>Wider = more stable!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">⬇️</div>
+                        <h4>Low Center of Gravity</h4>
+                        <p>Lower weight = less tipping!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">⚖️</div>
+                        <h4>Good Balance</h4>
+                        <p>Equal weight on all sides!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🏗️</div>
+                        <h4>Strong Foundation</h4>
+                        <p>Deep and solid base!</p>
+                    </div>
+                </div>
+
+                <h3>Examples of Stable Structures 🏛️</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🔺</div>
+                        <h4>Pyramids</h4>
+                        <p>Wide base, super stable!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">🪑</div>
+                        <h4>Chairs</h4>
+                        <p>Four legs spread weight!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">⛵</div>
+                        <h4>Boats</h4>
+                        <p>Keels keep them balanced!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">🏠</div>
+                        <h4>Buildings</h4>
+                        <p>Strong foundations!</p>
+                    </div>
+                </div>
+
+                <h3>How to Improve Stability 📐</h3>
+                <ul style="font-size: 1.2rem; line-height: 2; margin: 2rem 0;">
+                    <li><strong>Make the base wider:</strong> Spread out the bottom!</li>
+                    <li><strong>Lower the center of gravity:</strong> Keep heavy parts low!</li>
+                    <li><strong>Add more support points:</strong> Like legs on a chair!</li>
+                    <li><strong>Use strong foundations:</strong> Dig deep into the ground!</li>
+                    <li><strong>Balance the weight:</strong> Don't put all weight on one side!</li>
+                </ul>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    <h3>🎯 Activity 1: Drag & Drop - Stable vs Unstable!</h3>
+                    <p>Sort these structures by their stability!</p>
                     
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d24-drag-items">
                         <div class="drag-item" draggable="true" data-category="stable">🔺 Pyramid</div>
@@ -1589,11 +1706,11 @@
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">✅ STABLE Structures</h4>
                             <div class="drop-zone" data-category="stable"></div>
                         </div>
                         <div>
-                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">❌ UNSTABLE Structures</h4>
                             <div class="drop-zone" data-category="unstable"></div>
                         </div>
                     </div>
@@ -1611,57 +1728,57 @@
                     <div id="d24-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. Fill in: <input type="text" id="d24-blank1" style="width: 200px;">
+                                1. <input type="text" id="d24-blank1" style="width: 180px;"> means keeping balance and not tipping over.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Fill in: <input type="text" id="d24-blank2" style="width: 200px;">
+                                2. A <input type="text" id="d24-blank2" style="width: 150px;"> base makes a structure more stable.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. Fill in: <input type="text" id="d24-blank3" style="width: 200px;">
+                                3. <input type="text" id="d24-blank3" style="width: 180px;"> are very stable because of their shape.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. Fill in: <input type="text" id="d24-blank4" style="width: 200px;">
+                                4. A low center of <input type="text" id="d24-blank4" style="width: 180px;"> improves stability.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Fill in: <input type="text" id="d24-blank5" style="width: 200px;">
+                                5. <input type="text" id="d24-blank5" style="width: 180px;"> is important for stability.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Fill in: <input type="text" id="d24-blank6" style="width: 200px;">
+                                6. Tall structures need strong <input type="text" id="d24-blank6" style="width: 180px;"> for stability.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. Fill in: <input type="text" id="d24-blank7" style="width: 200px;">
+                                7. Three or four <input type="text" id="d24-blank7" style="width: 150px;"> make a chair stable.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Fill in: <input type="text" id="d24-blank8" style="width: 200px;">
+                                8. <input type="text" id="d24-blank8" style="width: 150px;"> can affect a structure's stability.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Fill in: <input type="text" id="d24-blank9" style="width: 200px;">
+                                9. A structure must stay <input type="text" id="d24-blank9" style="width: 150px;"> in one spot to be stable.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Fill in: <input type="text" id="d24-blank10" style="width: 200px;">
+                                10. Good design ensures structures remain <input type="text" id="d24-blank10" style="width: 180px;">.
                             </p>
                         </div>
                     </div>
 
-                    <button class="btn btn-check" onclick="checkD24FillBlanks()">Check Answers!</button>
+                    <button class="btn btn-check" onclick="checkD24FillBlanks()">Check My Answers!</button>
                     <div id="d24-fillblank-feedback" class="feedback"></div>
                 </div>
 
@@ -1684,10 +1801,58 @@
         <div id="d25" class="page">
             <div class="card" style="border-color: var(--teal);">
                 <h2>D2.5 - Material Properties 🧱</h2>
-                <p>Different materials have different properties - strength, flexibility, weight!</p>
+                <p>Different materials have different <strong>properties</strong> - like strength, flexibility, and weight!</p>
+
+                <h3>Important Material Properties 🔬</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">💪</div>
+                        <h4>Strength</h4>
+                        <p>How much weight it holds!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🌈</div>
+                        <h4>Flexibility</h4>
+                        <p>Can it bend without breaking?</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">⚖️</div>
+                        <h4>Weight</h4>
+                        <p>Light or heavy?</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">💧</div>
+                        <h4>Waterproof</h4>
+                        <p>Does water damage it?</p>
+                    </div>
+                </div>
+
+                <h3>Common Building Materials 🏗️</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">🔩</div>
+                        <h4>Steel</h4>
+                        <p>Very strong, heavy!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">🪵</div>
+                        <h4>Wood</h4>
+                        <p>Medium strength, lighter!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">🛡️</div>
+                        <h4>Plastic</h4>
+                        <p>Lightweight, waterproof!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🪨</div>
+                        <h4>Concrete</h4>
+                        <p>Very strong, very heavy!</p>
+                    </div>
+                </div>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    <h3>🎯 Activity 1: Drag & Drop - Material Properties!</h3>
                     
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d25-drag-items">
                         <div class="drag-item" draggable="true" data-category="strong">🔩 Steel</div>
@@ -1700,14 +1865,22 @@
                         <div class="drag-item" draggable="true" data-category="light">🎈 Inflatable plastic</div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.3rem;">💪 Strong</h4>
                             <div class="drop-zone" data-category="strong"></div>
                         </div>
                         <div>
-                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <h4 style="text-align: center; color: var(--pink); font-size: 1.3rem;">🌈 Flexible</h4>
+                            <div class="drop-zone" data-category="flexible"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--blue); font-size: 1.3rem;">💧 Waterproof</h4>
                             <div class="drop-zone" data-category="waterproof"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--orange); font-size: 1.3rem;">🪶 Light</h4>
+                            <div class="drop-zone" data-category="light"></div>
                         </div>
                     </div>
 
@@ -1724,57 +1897,57 @@
                     <div id="d25-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. Fill in: <input type="text" id="d25-blank1" style="width: 200px;">
+                                1. <input type="text" id="d25-blank1" style="width: 180px;"> are the characteristics of materials.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Fill in: <input type="text" id="d25-blank2" style="width: 200px;">
+                                2. <input type="text" id="d25-blank2" style="width: 150px;"> is known for its great strength.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. Fill in: <input type="text" id="d25-blank3" style="width: 200px;">
+                                3. <input type="text" id="d25-blank3" style="width: 150px;"> is a flexible material that can bend.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. Fill in: <input type="text" id="d25-blank4" style="width: 200px;">
+                                4. <input type="text" id="d25-blank4" style="width: 180px;"> materials don't let water through.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Fill in: <input type="text" id="d25-blank5" style="width: 200px;">
+                                5. <input type="text" id="d25-blank5" style="width: 150px;"> is an important property when choosing materials.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Fill in: <input type="text" id="d25-blank6" style="width: 200px;">
+                                6. <input type="text" id="d25-blank6" style="width: 150px;"> is lightweight and waterproof.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. Fill in: <input type="text" id="d25-blank7" style="width: 200px;">
+                                7. <input type="text" id="d25-blank7" style="width: 180px;"> means how long a material lasts.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Fill in: <input type="text" id="d25-blank8" style="width: 200px;">
+                                8. <input type="text" id="d25-blank8" style="width: 150px;"> is strong and good for foundations.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Fill in: <input type="text" id="d25-blank9" style="width: 200px;">
+                                9. Different <input type="text" id="d25-blank9" style="width: 180px;"> have different properties.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Fill in: <input type="text" id="d25-blank10" style="width: 200px;">
+                                10. Engineers choose materials based on their <input type="text" id="d25-blank10" style="width: 180px;">.
                             </p>
                         </div>
                     </div>
 
-                    <button class="btn btn-check" onclick="checkD25FillBlanks()">Check Answers!</button>
+                    <button class="btn btn-check" onclick="checkD25FillBlanks()">Check My Answers!</button>
                     <div id="d25-fillblank-feedback" class="feedback"></div>
                 </div>
 
@@ -1797,10 +1970,58 @@
         <div id="d26" class="page">
             <div class="card" style="border-color: var(--red);">
                 <h2>D2.6 - Forces on Structures 💨</h2>
-                <p>Forces like gravity, wind, and earthquakes affect structures!</p>
+                <p>Forces like <strong>gravity, wind, and earthquakes</strong> affect structures!</p>
+
+                <h3>Types of Forces 💨</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">⬇️</div>
+                        <h4>Gravity</h4>
+                        <p>Pulls everything down!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">💨</div>
+                        <h4>Wind</h4>
+                        <p>Pushes structures sideways!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">🏔️</div>
+                        <h4>Earthquakes</h4>
+                        <p>Shake the ground!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🌊</div>
+                        <h4>Water</h4>
+                        <p>Pressure from floods!</p>
+                    </div>
+                </div>
+
+                <h3>How Forces Affect Structures 🔄</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">⬇️</div>
+                        <h4>Compression</h4>
+                        <p>Pushes and squeezes!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">↔️</div>
+                        <h4>Tension</h4>
+                        <p>Pulls and stretches!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">🌀</div>
+                        <h4>Twisting</h4>
+                        <p>Rotates and turns!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">↕️</div>
+                        <h4>Bending</h4>
+                        <p>Curves and flexes!</p>
+                    </div>
+                </div>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    <h3>🎯 Activity 1: Drag & Drop - Types of Forces!</h3>
                     
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d26-drag-items">
                         <div class="drag-item" draggable="true" data-category="push">🏋️ Weight pressing down</div>
@@ -1813,14 +2034,22 @@
                         <div class="drag-item" draggable="true" data-category="natural">🏔️ Earthquake</div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.3rem;">⬇️ Push Forces</h4>
                             <div class="drop-zone" data-category="push"></div>
                         </div>
                         <div>
-                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <h4 style="text-align: center; color: var(--blue); font-size: 1.3rem;">↔️ Pull Forces</h4>
+                            <div class="drop-zone" data-category="pull"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--yellow); font-size: 1.3rem;">🌀 Twist Forces</h4>
                             <div class="drop-zone" data-category="twist"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.3rem;">🌍 Natural Forces</h4>
+                            <div class="drop-zone" data-category="natural"></div>
                         </div>
                     </div>
 
@@ -1837,57 +2066,57 @@
                     <div id="d26-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. Fill in: <input type="text" id="d26-blank1" style="width: 200px;">
+                                1. A <input type="text" id="d26-blank1" style="width: 150px;"> can change a structure's shape or position.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Fill in: <input type="text" id="d26-blank2" style="width: 200px;">
+                                2. <input type="text" id="d26-blank2" style="width: 150px;"> pulls everything downward.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. Fill in: <input type="text" id="d26-blank3" style="width: 200px;">
+                                3. <input type="text" id="d26-blank3" style="width: 150px;"> is a force that can push structures sideways.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. Fill in: <input type="text" id="d26-blank4" style="width: 200px;">
+                                4. <input type="text" id="d26-blank4" style="width: 200px;"> is when something is pushed or squeezed.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Fill in: <input type="text" id="d26-blank5" style="width: 200px;">
+                                5. <input type="text" id="d26-blank5" style="width: 150px;"> is when something is pulled or stretched.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Fill in: <input type="text" id="d26-blank6" style="width: 200px;">
+                                6. <input type="text" id="d26-blank6" style="width: 200px;"> create forces that shake structures.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. Fill in: <input type="text" id="d26-blank7" style="width: 200px;">
+                                7. Structures must <input type="text" id="d26-blank7" style="width: 180px;"> different types of forces.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Fill in: <input type="text" id="d26-blank8" style="width: 200px;">
+                                8. <input type="text" id="d26-blank8" style="width: 180px;"> forces can damage structures.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Fill in: <input type="text" id="d26-blank9" style="width: 200px;">
+                                9. The <input type="text" id="d26-blank9" style="width: 150px;"> of a structure creates downward force.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Fill in: <input type="text" id="d26-blank10" style="width: 200px;">
+                                10. Engineers design structures to resist <input type="text" id="d26-blank10" style="width: 150px;">.
                             </p>
                         </div>
                     </div>
 
-                    <button class="btn btn-check" onclick="checkD26FillBlanks()">Check Answers!</button>
+                    <button class="btn btn-check" onclick="checkD26FillBlanks()">Check My Answers!</button>
                     <div id="d26-fillblank-feedback" class="feedback"></div>
                 </div>
 
@@ -1910,10 +2139,67 @@
         <div id="d27" class="page">
             <div class="card" style="border-color: var(--pink);">
                 <h2>D2.7 - Struts & Ties 🔗</h2>
-                <p>Struts resist compression (pushing). Ties resist tension (pulling)!</p>
+                <p><strong>Struts</strong> resist compression (pushing). <strong>Ties</strong> resist tension (pulling)!</p>
+
+                <h3>What are Struts? 🏛️</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">🏛️</div>
+                        <h4>Columns</h4>
+                        <p>Hold up buildings!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">|</div>
+                        <h4>Vertical Beams</h4>
+                        <p>Stand straight up!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🪑</div>
+                        <h4>Chair Legs</h4>
+                        <p>Support your weight!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🌉</div>
+                        <h4>Bridge Towers</h4>
+                        <p>Hold up the bridge!</p>
+                    </div>
+                </div>
+
+                <h3>What are Ties? 🪢</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🪢</div>
+                        <h4>Cables</h4>
+                        <p>Pull and hold tight!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">🎪</div>
+                        <h4>Tent Ropes</h4>
+                        <p>Keep tents standing!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">🏗️</div>
+                        <h4>Support Wires</h4>
+                        <p>Pull structures tight!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">⛵</div>
+                        <h4>Sail Rigging</h4>
+                        <p>Hold sails in place!</p>
+                    </div>
+                </div>
+
+                <h3>How They Work Together 🤝</h3>
+                <ul style="font-size: 1.2rem; line-height: 2; margin: 2rem 0;">
+                    <li><strong>Struts push back:</strong> They resist compression forces!</li>
+                    <li><strong>Ties pull back:</strong> They resist tension forces!</li>
+                    <li><strong>Working as a team:</strong> Both are needed for strong structures!</li>
+                    <li><strong>In bridges:</strong> Towers are struts, cables are ties!</li>
+                    <li><strong>Balance is key:</strong> Push and pull must be equal!</li>
+                </ul>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    <h3>🎯 Activity 1: Drag & Drop - Struts vs Ties!</h3>
                     
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d27-drag-items">
                         <div class="drag-item" draggable="true" data-category="strut">🏛️ Columns</div>
@@ -1928,11 +2214,11 @@
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <h4 style="text-align: center; color: var(--blue); font-size: 1.5rem;">🏛️ STRUTS (Compression)</h4>
                             <div class="drop-zone" data-category="strut"></div>
                         </div>
                         <div>
-                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <h4 style="text-align: center; color: var(--pink); font-size: 1.5rem;">🪢 TIES (Tension)</h4>
                             <div class="drop-zone" data-category="tie"></div>
                         </div>
                     </div>
@@ -1950,57 +2236,57 @@
                     <div id="d27-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. Fill in: <input type="text" id="d27-blank1" style="width: 200px;">
+                                1. A <input type="text" id="d27-blank1" style="width: 150px;"> is a structural piece that resists compression.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Fill in: <input type="text" id="d27-blank2" style="width: 200px;">
+                                2. A <input type="text" id="d27-blank2" style="width: 150px;"> is a structural piece that resists tension.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. Fill in: <input type="text" id="d27-blank3" style="width: 200px;">
+                                3. <input type="text" id="d27-blank3" style="width: 150px;"> in buildings act as struts.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. Fill in: <input type="text" id="d27-blank4" style="width: 200px;">
+                                4. Bridge <input type="text" id="d27-blank4" style="width: 150px;"> are examples of ties.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Fill in: <input type="text" id="d27-blank5" style="width: 200px;">
+                                5. Struts handle <input type="text" id="d27-blank5" style="width: 180px;"> forces.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Fill in: <input type="text" id="d27-blank6" style="width: 200px;">
+                                6. Ties handle <input type="text" id="d27-blank6" style="width: 180px;"> forces.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. Fill in: <input type="text" id="d27-blank7" style="width: 200px;">
+                                7. Struts and ties work <input type="text" id="d27-blank7" style="width: 180px;"> to support structures.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Fill in: <input type="text" id="d27-blank8" style="width: 200px;">
+                                8. <input type="text" id="d27-blank8" style="width: 200px;"> pushes or squeezes structural pieces.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Fill in: <input type="text" id="d27-blank9" style="width: 200px;">
+                                9. <input type="text" id="d27-blank9" style="width: 150px;"> pulls or stretches structural pieces.
                             </p>
                         </div>
                         <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Fill in: <input type="text" id="d27-blank10" style="width: 200px;">
+                                10. Engineers use both struts and ties for strong <input type="text" id="d27-blank10" style="width: 180px;">.
                             </p>
                         </div>
                     </div>
 
-                    <button class="btn btn-check" onclick="checkD27FillBlanks()">Check Answers!</button>
+                    <button class="btn btn-check" onclick="checkD27FillBlanks()">Check My Answers!</button>
                     <div id="d27-fillblank-feedback" class="feedback"></div>
                 </div>
 
@@ -2017,6 +2303,8 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </div>
         </div>
     </div>
 
