@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazing Forces! - Grade 3 Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Bangers&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Strong and Stable Structures! - Grade 3 Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@400;600;700&family=Chewy&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #7C3AED;
-            --secondary: #EC4899;
-            --accent: #10B981;
-            --orange: #F59E0B;
-            --blue: #3B82F6;
-            --cyan: #06B6D4;
-            --red: #EF4444;
-            --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --card-bg: #FFFFFF;
-            --text: #1F2937;
+            --pink: #FF6B9D;
+            --yellow: #FFD93D;
+            --green: #6BCF7F;
+            --blue: #4D96FF;
+            --purple: #9D4EDD;
+            --orange: #FF9F1C;
+            --teal: #06FFA5;
+            --red: #EF476F;
         }
 
         * {
@@ -26,156 +24,182 @@
         }
 
         body {
-            font-family: 'Quicksand', sans-serif;
-            background: #1a1a2e;
-            color: var(--text);
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(135deg, #FFF5E6 0%, #FFE4C4 100%);
+            color: #2D3748;
             overflow-x: hidden;
-            position: relative;
         }
 
-        /* Animated Starfield Background */
-        .starfield {
+        /* Animated Background Shapes */
+        .bg-shapes {
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
+            overflow: hidden;
             z-index: -1;
-            background: linear-gradient(180deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
         }
 
-        .star {
+        .shape {
             position: absolute;
-            background: white;
             border-radius: 50%;
-            animation: twinkle 3s infinite;
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
         }
 
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
+        .shape:nth-child(1) { width: 100px; height: 100px; background: var(--pink); top: 10%; left: 10%; animation-delay: 0s; }
+        .shape:nth-child(2) { width: 150px; height: 150px; background: var(--blue); top: 50%; left: 70%; animation-delay: 5s; }
+        .shape:nth-child(3) { width: 80px; height: 80px; background: var(--green); top: 70%; left: 20%; animation-delay: 10s; }
+        .shape:nth-child(4) { width: 120px; height: 120px; background: var(--yellow); top: 30%; left: 80%; animation-delay: 15s; }
 
-        /* Energy Particles */
-        .particle {
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: float-particle 15s infinite;
-            z-index: -1;
-        }
-
-        @keyframes float-particle {
-            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) translateX(100px) scale(1); opacity: 0; }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(90deg); }
+            50% { transform: translate(0, -60px) rotate(180deg); }
+            75% { transform: translate(-30px, -30px) rotate(270deg); }
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 50%, var(--blue) 100%);
             padding: 3rem 2rem;
             text-align: center;
             position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             overflow: hidden;
-            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
         }
 
         header::before {
-            content: '';
+            content: '🏗️';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 20px,
-                rgba(255,255,255,0.03) 20px,
-                rgba(255,255,255,0.03) 40px
-            );
-            animation: slide 30s linear infinite;
+            font-size: 10rem;
+            opacity: 0.15;
+            top: -20px;
+            left: 5%;
+            animation: bounce 3s infinite;
         }
 
-        @keyframes slide {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+        header::after {
+            content: '🏛️';
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.15;
+            top: -20px;
+            right: 5%;
+            animation: bounce 3s infinite 1.5s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
 
         h1 {
-            font-family: 'Bangers', cursive;
+            font-family: 'Bubblegum Sans', cursive;
             font-size: 4rem;
             color: white;
             text-shadow: 
-                3px 3px 0 #EC4899,
-                6px 6px 0 #7C3AED,
-                9px 9px 20px rgba(0,0,0,0.5);
-            margin-bottom: 0.5rem;
-            position: relative;
-            letter-spacing: 3px;
-            animation: glow 2s ease-in-out infinite alternate;
+                4px 4px 0 var(--pink),
+                8px 8px 0 var(--purple),
+                12px 12px 30px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            animation: wiggle 2s ease-in-out infinite;
         }
 
-        @keyframes glow {
-            from { text-shadow: 3px 3px 0 #EC4899, 6px 6px 0 #7C3AED, 9px 9px 20px rgba(0,0,0,0.5); }
-            to { text-shadow: 3px 3px 0 #EC4899, 6px 6px 0 #7C3AED, 9px 9px 30px rgba(236,72,153,0.8), 0 0 40px rgba(124,58,237,0.6); }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
         }
 
         .subtitle {
-            font-size: 1.8rem;
+            font-family: 'Chewy', cursive;
+            font-size: 2rem;
             color: white;
-            font-weight: 700;
-            position: relative;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
         }
 
         /* Navigation */
         nav {
-            background: rgba(30, 30, 60, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             padding: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 3px solid #7C3AED;
+            border-bottom: 5px solid var(--pink);
             transition: all 0.3s;
         }
 
-        /* Hide navigation when not on home page */
         nav.hidden {
             display: none;
         }
 
-        /* Back button styles */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+            color: white;
+            border: none;
+            padding: 1.2rem;
+            border-radius: 20px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 0 rgba(0,0,0,0.2);
+            text-transform: uppercase;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 0 rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:active {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .nav-btn.active {
+            background: linear-gradient(135deg, var(--pink), var(--orange));
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Back Buttons */
         .back-button {
             display: none;
             position: fixed;
             top: 20px;
             left: 20px;
             z-index: 101;
-            background: linear-gradient(135deg, #7C3AED, #EC4899);
+            background: linear-gradient(135deg, var(--pink), var(--purple));
             color: white;
             border: none;
             padding: 1rem 2rem;
             border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Fredoka', sans-serif;
             font-size: 1.2rem;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4);
             transition: all 0.3s;
         }
 
         .back-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 30px rgba(124, 58, 237, 0.6);
-        }
-
-        .back-button:active {
-            transform: translateY(-1px);
+            box-shadow: 0 12px 30px rgba(255, 107, 157, 0.6);
         }
 
         .back-button.show {
@@ -200,59 +224,7 @@
             display: block;
         }
 
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .nav-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 1rem;
-            border-radius: 12px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(124,58,237,0.4);
-            position: relative;
-            overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .nav-btn:hover::before {
-            left: 100%;
-        }
-
-        .nav-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(124,58,237,0.6);
-        }
-
-        .nav-btn.active {
-            background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);
-            box-shadow: 0 6px 25px rgba(236,72,153,0.6);
-            transform: scale(1.05);
-        }
-
-        /* Main Content */
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -273,13 +245,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Cards */
         .card {
-            background: var(--card-bg);
-            border-radius: 20px;
+            background: white;
+            border-radius: 30px;
             padding: 3rem;
             margin-bottom: 2rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-            border: 3px solid;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border: 6px solid;
             position: relative;
             overflow: hidden;
         }
@@ -287,185 +260,140 @@
         .card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #EC4899, #F59E0B);
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, var(--pink), var(--yellow), var(--green), var(--blue), var(--purple));
+            border-radius: 30px;
+            z-index: -1;
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
         .card h2 {
-            font-family: 'Bangers', cursive;
+            font-family: 'Bubblegum Sans', cursive;
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #EC4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 2px;
+            color: var(--pink);
+            text-shadow: 3px 3px 0 var(--yellow);
         }
 
         .card h3 {
-            font-size: 2rem;
-            margin: 2rem 0 1rem;
-            color: #7C3AED;
-            font-weight: 700;
+            font-family: 'Chewy', cursive;
+            font-size: 2.2rem;
+            margin: 2rem 0 1.5rem;
+            color: var(--purple);
         }
 
         .card p, .card li {
-            font-size: 1.2rem;
-            line-height: 1.9;
+            font-size: 1.3rem;
+            line-height: 1.8;
             margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .card ul {
             margin-left: 2rem;
         }
 
-        /* Interactive Activities */
-        .activity-box {
-            background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            border: 4px solid #3B82F6;
-            box-shadow: 0 10px 30px rgba(59,130,246,0.3);
-        }
-
-        .activity-box h3 {
-            color: #1E40AF;
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 800;
-        }
-
+        /* Example Grid */
         .example-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
         }
 
         .example-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 2rem;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border: 4px solid;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 5px solid;
+            transition: all 0.4s;
             cursor: pointer;
         }
 
         .example-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            transform: translateY(-15px) rotate(-5deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
         }
 
         .icon {
-            font-size: 4.5rem;
+            font-size: 5rem;
             margin-bottom: 1rem;
             display: block;
-            animation: bounce 2s ease-in-out infinite;
+            animation: bounce-icon 2s ease-in-out infinite;
         }
 
-        @keyframes bounce {
+        @keyframes bounce-icon {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
         }
 
         .example-card h4 {
-            font-size: 1.4rem;
+            font-family: 'Chewy', cursive;
+            font-size: 1.6rem;
             margin-bottom: 0.8rem;
-            font-weight: 700;
         }
 
         .example-card p {
             font-size: 1.1rem;
+            line-height: 1.5;
         }
 
-        .btn {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            color: white;
-            border: none;
-            padding: 1.2rem 2.5rem;
-            border-radius: 12px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 6px 20px rgba(16,185,129,0.4);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        /* Activity Box */
+        .activity-box {
+            background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+            border-radius: 25px;
+            padding: 3rem;
+            margin: 2rem 0;
+            border: 6px solid var(--blue);
+            box-shadow: 0 10px 30px rgba(77,150,255,0.3);
         }
 
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(16,185,129,0.6);
+        .activity-box h3 {
+            color: #0369A1;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Bubblegum Sans', cursive;
         }
 
-        .btn:active {
-            transform: translateY(-1px);
-        }
-
-        .btn-check {
-            background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);
-            box-shadow: 0 6px 20px rgba(236,72,153,0.4);
-        }
-
-        .btn-check:hover {
-            box-shadow: 0 10px 30px rgba(236,72,153,0.6);
-        }
-
-        .btn-reset {
-            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-            box-shadow: 0 6px 20px rgba(245,158,11,0.4);
-        }
-
-        .btn-reset:hover {
-            box-shadow: 0 10px 30px rgba(245,158,11,0.6);
-        }
-
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-
-        /* Quiz Styles */
+        /* Quiz Box */
         .quiz-box {
             background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-radius: 25px;
+            padding: 3rem;
             margin: 2rem 0;
-            border: 4px solid #F59E0B;
-            box-shadow: 0 10px 30px rgba(245,158,11,0.3);
+            border: 6px solid var(--orange);
+            box-shadow: 0 10px 30px rgba(255,159,28,0.3);
         }
 
         .quiz-box h3 {
-            color: #B45309;
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 800;
+            color: #C2410C;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Bubblegum Sans', cursive;
         }
 
         .question {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 2rem;
             margin: 1.5rem 0;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-left: 6px solid #7C3AED;
+            border-left: 8px solid var(--purple);
         }
 
         .question h4 {
             font-size: 1.4rem;
             margin-bottom: 1.5rem;
-            color: var(--text);
             font-weight: 700;
         }
 
@@ -477,42 +405,42 @@
 
         .option {
             background: #F3F4F6;
-            padding: 1.2rem;
-            border-radius: 12px;
+            padding: 1.5rem;
+            border-radius: 15px;
             cursor: pointer;
             transition: all 0.3s;
-            border: 3px solid transparent;
-            font-size: 1.15rem;
+            border: 4px solid transparent;
+            font-size: 1.2rem;
             font-weight: 600;
         }
 
         .option:hover {
             background: #E5E7EB;
-            transform: translateX(8px);
-            border-color: #7C3AED;
+            transform: translateX(10px) scale(1.02);
+            border-color: var(--blue);
         }
 
         .option.selected {
-            border-color: #3B82F6;
+            border-color: var(--blue);
             background: #DBEAFE;
-            transform: translateX(8px);
+            transform: translateX(10px);
         }
 
         .option.correct {
-            border-color: #10B981;
+            border-color: var(--green);
             background: #D1FAE5;
-            animation: correctPulse 0.5s;
+            animation: correctBounce 0.6s;
         }
 
-        @keyframes correctPulse {
+        @keyframes correctBounce {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
 
         .option.incorrect {
-            border-color: #EF4444;
+            border-color: var(--red);
             background: #FEE2E2;
-            animation: shake 0.5s;
+            animation: shake 0.6s;
         }
 
         @keyframes shake {
@@ -523,100 +451,116 @@
 
         .feedback {
             margin-top: 1.5rem;
-            padding: 1.5rem;
-            border-radius: 12px;
+            padding: 2rem;
+            border-radius: 15px;
             font-weight: 700;
             display: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         .feedback.show {
             display: block;
-            animation: slideDown 0.5s;
+            animation: popIn 0.5s;
         }
 
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .feedback.correct {
             background: #D1FAE5;
             color: #065F46;
-            border: 3px solid #10B981;
+            border: 4px solid var(--green);
         }
 
         .feedback.incorrect {
             background: #FEE2E2;
             color: #991B1B;
-            border: 3px solid #EF4444;
+            border: 4px solid var(--red);
         }
 
         .score-display {
             background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
+            padding: 3rem;
+            border-radius: 20px;
             text-align: center;
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 800;
             margin-top: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 4px solid #7C3AED;
+            border: 5px solid var(--purple);
         }
 
-        .visual-demo {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            text-align: center;
-            margin: 2rem 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border: 3px solid #7C3AED;
-        }
-
-        .interactive-item {
-            display: inline-block;
-            padding: 1.5rem 2.5rem;
-            margin: 1rem;
-            border-radius: 15px;
-            font-size: 2rem;
+        /* Buttons */
+        .btn {
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: white;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 20px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
-            border: 4px solid;
-            background: white;
+            box-shadow: 0 8px 0 rgba(0,0,0,0.2);
+            text-transform: uppercase;
         }
 
-        .interactive-item:hover {
-            transform: scale(1.1);
+        .btn:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 0 rgba(0,0,0,0.2);
         }
 
+        .btn:active {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .btn-check {
+            background: linear-gradient(135deg, var(--pink), var(--red));
+        }
+
+        .btn-reset {
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        /* Drag and Drop */
         .drag-item {
             background: white;
             padding: 1.5rem;
-            border-radius: 12px;
+            border-radius: 15px;
             cursor: move;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border: 3px solid #7C3AED;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            border: 4px solid var(--purple);
             font-size: 1.2rem;
             text-align: center;
             font-weight: 700;
             transition: all 0.3s;
-            margin: 0.5rem;
+            margin: 0.8rem;
+            display: inline-block;
         }
 
         .drag-item:hover {
-            transform: rotate(-3deg) scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transform: rotate(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
         .drop-zone {
-            background: rgba(124, 58, 237, 0.1);
-            border: 4px dashed #7C3AED;
-            border-radius: 15px;
-            padding: 2rem;
+            background: rgba(157, 78, 221, 0.1);
+            border: 5px dashed var(--purple);
+            border-radius: 20px;
+            padding: 2.5rem;
             min-height: 180px;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
@@ -626,79 +570,75 @@
         }
 
         .drop-zone.drag-over {
-            background: rgba(124, 58, 237, 0.3);
+            background: rgba(157, 78, 221, 0.3);
             transform: scale(1.02);
-            border-color: #EC4899;
+            border-color: var(--pink);
         }
 
+        /* Fill in the Blank */
+        input[type="text"] {
+            border: 3px solid var(--blue);
+            padding: 0.8rem;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--pink);
+            box-shadow: 0 0 10px rgba(255, 107, 157, 0.3);
+        }
+
+        /* Home Grid */
         .home-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
         }
 
         .topic-card {
             background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-radius: 25px;
+            padding: 3rem;
             text-align: center;
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 4px solid;
+            transition: all 0.4s;
+            border: 6px solid;
             position: relative;
-            overflow: hidden;
-        }
-
-        .topic-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(236,72,153,0.1));
-            transform: translateY(100%);
-            transition: transform 0.4s;
-        }
-
-        .topic-card:hover::before {
-            transform: translateY(0);
         }
 
         .topic-card:hover {
-            transform: translateY(-15px) rotate(-3deg);
+            transform: translateY(-20px) scale(1.05);
             box-shadow: 0 25px 60px rgba(0,0,0,0.3);
         }
 
         .topic-card .icon {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
         }
 
         .topic-card h3 {
-            color: var(--text);
             margin: 1rem 0;
-            position: relative;
-            z-index: 1;
+            font-size: 1.7rem;
         }
 
         .topic-card p {
-            position: relative;
-            z-index: 1;
+            font-size: 1.2rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
 
             .subtitle {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
 
             .nav-grid {
@@ -712,289 +652,291 @@
             .card h2 {
                 font-size: 2.2rem;
             }
+
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="starfield" id="starfield"></div>
-    
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
     <header>
-        <h1>⚡ AMAZING FORCES! ⚡</h1>
-        <p class="subtitle">Discover the Power All Around Us!</p>
+        <h1>🏗️ Strong and Stable Structures! 🏛️</h1>
+        <p class="subtitle">Let's Build Amazing Things!</p>
     </header>
 
     <nav>
         <div class="nav-grid">
             <button class="nav-btn active" onclick="showPage('home', event)">🏠 Home</button>
-            <button class="nav-btn" onclick="showPage('c21', event)">C2.1 - Types of Forces</button>
-            <button class="nav-btn" onclick="showPage('c22', event)">C2.2 - Exerting Forces</button>
-            <button class="nav-btn" onclick="showPage('c23', event)">C2.3 - Effects of Forces</button>
-            <button class="nav-btn" onclick="showPage('c24', event)">C2.4 - Forces in Daily Life</button>
-            <button class="nav-btn" onclick="showPage('c11', event)">C1.1 - Natural Forces</button>
-            <button class="nav-btn" onclick="showPage('c12', event)">C1.2 - Safety & Protection</button>
+            <button class="nav-btn" onclick="showPage('d11', event)">D1.1 - Effects</button>
+            <button class="nav-btn" onclick="showPage('d12', event)">D1.2 - Environment</button>
+            <button class="nav-btn" onclick="showPage('d21', event)">D2.1 - What is Structure?</button>
+            <button class="nav-btn" onclick="showPage('d22', event)">D2.2 - Form & Function</button>
+            <button class="nav-btn" onclick="showPage('d23', event)">D2.3 - Strength</button>
+            <button class="nav-btn" onclick="showPage('d24', event)">D2.4 - Stability</button>
+            <button class="nav-btn" onclick="showPage('d25', event)">D2.5 - Materials</button>
+            <button class="nav-btn" onclick="showPage('d26', event)">D2.6 - Forces</button>
+            <button class="nav-btn" onclick="showPage('d27', event)">D2.7 - Struts & Ties</button>
         </div>
     </nav>
 
-    <!-- Back to Home Button (appears when on lesson pages) -->
     <button class="back-button" id="backButton" onclick="showPage('home', event)">
         ← Back to Lessons
     </button>
 
-    <div class="container">
-        <!-- HOME PAGE -->
+    <div class="container">        <!-- HOME PAGE -->
         <div id="home" class="page active">
-            <div class="card" style="border-color: #7C3AED;">
-                <h2>Welcome, Force Explorers! 🚀</h2>
-                <p>Get ready for an incredible journey into the world of FORCES! Forces are pushes and pulls that make things move, stop, or change. They're everywhere - from the wind blowing leaves to you kicking a soccer ball!</p>
-                <p>Click on any topic below to start your adventure. Each lesson has awesome activities and a quiz to test your super force knowledge!</p>
+            <div class="card" style="border-color: var(--pink);">
+                <h2>Welcome, Young Engineers! 🎉</h2>
+                <p>Get ready to explore the amazing world of STRUCTURES! You'll learn how buildings stand tall, bridges stay strong, and why some structures last forever!</p>
+                <p>Click on any topic below to start your learning adventure. Have fun building knowledge! 🚀</p>
             </div>
 
             <div class="home-grid">
-                <div class="topic-card" style="border-color: #7C3AED;" onclick="showPage('c21', event)">
-                    <div class="icon">🧲</div>
-                    <h3>Types of Forces</h3>
-                    <p>Contact forces and non-contact forces!</p>
+                <div class="topic-card" style="border-color: var(--pink);" onclick="showPage('d11', event)">
+                    <div class="icon">🌍</div>
+                    <h3>Effects on Society</h3>
+                    <p>How structures change our world!</p>
                 </div>
-                <div class="topic-card" style="border-color: #EC4899;" onclick="showPage('c22', event)">
-                    <div class="icon">✋</div>
-                    <h3>Exerting Forces</h3>
-                    <p>Different ways to apply force!</p>
+                <div class="topic-card" style="border-color: var(--yellow);" onclick="showPage('d12', event)">
+                    <div class="icon">🦫</div>
+                    <h3>Environmental Impact</h3>
+                    <p>Animal & human structures!</p>
                 </div>
-                <div class="topic-card" style="border-color: #F59E0B;" onclick="showPage('c23', event)">
-                    <div class="icon">🎯</div>
-                    <h3>Effects of Forces</h3>
-                    <p>How forces change objects!</p>
+                <div class="topic-card" style="border-color: var(--green);" onclick="showPage('d21', event)">
+                    <div class="icon">🏗️</div>
+                    <h3>What is a Structure?</h3>
+                    <p>The building blocks of everything!</p>
                 </div>
-                <div class="topic-card" style="border-color: #10B981;" onclick="showPage('c24', event)">
-                    <div class="icon">🏃</div>
-                    <h3>Forces in Daily Life</h3>
-                    <p>Forces you use every day!</p>
+                <div class="topic-card" style="border-color: var(--blue);" onclick="showPage('d22', event)">
+                    <div class="icon">🎨</div>
+                    <h3>Form & Function</h3>
+                    <p>Shape and purpose working together!</p>
                 </div>
-                <div class="topic-card" style="border-color: #3B82F6;" onclick="showPage('c11', event)">
-                    <div class="icon">🌪️</div>
-                    <h3>Natural Forces</h3>
-                    <p>Forces from nature around us!</p>
+                <div class="topic-card" style="border-color: var(--purple);" onclick="showPage('d23', event)">
+                    <div class="icon">💪</div>
+                    <h3>Strength</h3>
+                    <p>How structures hold heavy loads!</p>
                 </div>
-                <div class="topic-card" style="border-color: #EF4444;" onclick="showPage('c12', event)">
-                    <div class="icon">🛡️</div>
-                    <h3>Safety & Protection</h3>
-                    <p>Staying safe from harmful forces!</p>
+                <div class="topic-card" style="border-color: var(--orange);" onclick="showPage('d24', event)">
+                    <div class="icon">⚖️</div>
+                    <h3>Stability</h3>
+                    <p>Keeping structures balanced!</p>
+                </div>
+                <div class="topic-card" style="border-color: var(--teal);" onclick="showPage('d25', event)">
+                    <div class="icon">🧱</div>
+                    <h3>Materials</h3>
+                    <p>What we build with!</p>
+                </div>
+                <div class="topic-card" style="border-color: var(--red);" onclick="showPage('d26', event)">
+                    <div class="icon">💨</div>
+                    <h3>Forces on Structures</h3>
+                    <p>Push, pull, and pressure!</p>
+                </div>
+                <div class="topic-card" style="border-color: var(--pink);" onclick="showPage('d27', event)">
+                    <div class="icon">🔗</div>
+                    <h3>Struts & Ties</h3>
+                    <p>The secret support system!</p>
                 </div>
             </div>
         </div>
 
-        <!-- C2.1 PAGE -->
-        <div id="c21" class="page">
-            <div class="card" style="border-color: #7C3AED;">
-                <h2>C2.1 - Types of Forces 🧲</h2>
-                <p>There are two main types of forces: <strong>Contact Forces</strong> and <strong>Non-Contact Forces</strong>!</p>
+        <!-- D2.1 PAGE - COMPLETE EXAMPLE WITH ALL ACTIVITIES -->
+        <div id="d21" class="page">
+            <div class="card" style="border-color: var(--green);">
+                <h2>D2.1 - What is a Structure? 🏗️</h2>
+                <p>A <strong>structure</strong> is a supporting framework that holds a load and has a definite size, shape, and function!</p>
 
-                <h3>Contact Forces (Touch Needed!) ✋</h3>
-                <p>Contact forces happen when objects touch each other!</p>
+                <h3>What Makes Something a Structure?</h3>
                 <div class="example-grid">
-                    <div class="example-card" style="border-color: #7C3AED;">
-                        <div class="icon">👋</div>
-                        <h4>Push</h4>
-                        <p>Moving something away from you!</p>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">📏</div>
+                        <h4>Definite Size</h4>
+                        <p>It has specific measurements!</p>
                     </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">🤚</div>
-                        <h4>Pull</h4>
-                        <p>Bringing something toward you!</p>
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🔷</div>
+                        <h4>Definite Shape</h4>
+                        <p>It has a particular form!</p>
                     </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">🧊</div>
-                        <h4>Friction</h4>
-                        <p>Rubbing that slows things down!</p>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🎯</div>
+                        <h4>Specific Function</h4>
+                        <p>It does a certain job!</p>
                     </div>
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">💺</div>
-                        <h4>Normal Force</h4>
-                        <p>Support from surfaces below!</p>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">💪</div>
+                        <h4>Holds a Load</h4>
+                        <p>It supports weight!</p>
                     </div>
                 </div>
 
-                <h3>Non-Contact Forces (No Touch Needed!) 🌟</h3>
-                <p>Non-contact forces work without objects touching!</p>
+                <h3>Structures in Nature 🌿</h3>
                 <div class="example-grid">
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">⬇️</div>
-                        <h4>Gravity</h4>
-                        <p>Pulls everything toward Earth!</p>
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🌳</div>
+                        <h4>Trees</h4>
+                        <p>Trunk supports branches and leaves!</p>
                     </div>
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🧲</div>
-                        <h4>Magnetism</h4>
-                        <p>Magnets attract or repel!</p>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">🐚</div>
+                        <h4>Seashells</h4>
+                        <p>Hard shell protects the animal inside!</p>
                     </div>
-                    <div class="example-card" style="border-color: #A855F7;">
-                        <div class="icon">⚡</div>
-                        <h4>Static Electricity</h4>
-                        <p>Shocking force from charges!</p>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">🦴</div>
+                        <h4>Skeletons</h4>
+                        <p>Bones support our bodies!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">🏔️</div>
+                        <h4>Mountains</h4>
+                        <p>Rock formations that stand tall!</p>
+                    </div>
+                </div>
+
+                <h3>Built Structures 🏛️</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🏠</div>
+                        <h4>Houses</h4>
+                        <p>Shelter for people to live!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">🌉</div>
+                        <h4>Bridges</h4>
+                        <p>Connect two sides across water!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🗼</div>
+                        <h4>Towers</h4>
+                        <p>Stand tall to reach high places!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">🪑</div>
+                        <h4>Chairs</h4>
+                        <p>Support people when sitting!</p>
                     </div>
                 </div>
 
                 <div class="activity-box">
-                    <h3>🎯 Activity 1: Sort the Forces!</h3>
-                    <p>Drag each force to the correct category - Contact or Non-Contact!</p>
+                    <h3>🎯 Activity 1: Drag & Drop - Classify Structures!</h3>
+                    <p>Drag each example to the correct category - Natural or Built!</p>
                     
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c21-items">
-                        <div class="drag-item" draggable="true" data-category="contact">✋ Pushing a door</div>
-                        <div class="drag-item" draggable="true" data-category="noncontact">⬇️ Dropping a ball</div>
-                        <div class="drag-item" draggable="true" data-category="contact">🚗 Car brakes (friction)</div>
-                        <div class="drag-item" draggable="true" data-category="noncontact">🧲 Magnet on fridge</div>
-                        <div class="drag-item" draggable="true" data-category="contact">🤚 Pulling a wagon</div>
-                        <div class="drag-item" draggable="true" data-category="noncontact">⚡ Hair standing up</div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d21-drag-items">
+                        <div class="drag-item" draggable="true" data-category="natural">🌳 Oak Tree</div>
+                        <div class="drag-item" draggable="true" data-category="built">🏠 Brick House</div>
+                        <div class="drag-item" draggable="true" data-category="natural">🐚 Crab Shell</div>
+                        <div class="drag-item" draggable="true" data-category="built">🌉 Steel Bridge</div>
+                        <div class="drag-item" draggable="true" data-category="natural">🦴 Animal Skeleton</div>
+                        <div class="drag-item" draggable="true" data-category="built">🗼 CN Tower</div>
+                        <div class="drag-item" draggable="true" data-category="natural">🏔️ Rocky Mountain</div>
+                        <div class="drag-item" draggable="true" data-category="built">🪑 Wooden Chair</div>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                         <div>
-                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.5rem;">✋ CONTACT Forces</h4>
-                            <div class="drop-zone" data-category="contact"></div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">🌿 NATURAL Structures</h4>
+                            <div class="drop-zone" data-category="natural"></div>
                         </div>
                         <div>
-                            <h4 style="text-align: center; color: #EC4899; font-size: 1.5rem;">🌟 NON-CONTACT Forces</h4>
-                            <div class="drop-zone" data-category="noncontact"></div>
+                            <h4 style="text-align: center; color: var(--blue); font-size: 1.5rem;">🏗️ BUILT Structures</h4>
+                            <div class="drop-zone" data-category="built"></div>
                         </div>
                     </div>
 
                     <div class="button-group">
-                        <button class="btn btn-check" onclick="checkC21Activity()">Check My Answers!</button>
-                        <button class="btn btn-reset" onclick="resetC21Activity()">Reset</button>
+                        <button class="btn btn-check" onclick="checkD21DragDrop()">Check My Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD21DragDrop()">Reset</button>
                     </div>
-                    <div id="c21-feedback" class="feedback"></div>
+                    <div id="d21-drag-feedback" class="feedback"></div>
                 </div>
 
-                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
-                    <h3>🎯 Activity 2: Picture Matching Challenge!</h3>
-                    <p>Match each picture/scenario to the correct force type!</p>
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about structures!</p>
                     
-                    <div id="c21-picture-match" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🏀 A basketball player dribbling a ball (hand hitting ball):</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c21-pic1', 'contact')">Contact Force - Push/Impact</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic1', 'noncontact')">Non-Contact Force</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic1', 'neither')">Neither</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🍎 An apple falling from a tree to the ground:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c21-pic2', 'contact')">Contact Force</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic2', 'gravity')">Non-Contact Force - Gravity</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic2', 'magnetic')">Non-Contact Force - Magnetism</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">📎 Paper clips sticking to a magnet without touching it:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c21-pic3', 'friction')">Contact Force - Friction</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic3', 'magnetic')">Non-Contact Force - Magnetism</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic3', 'push')">Contact Force - Push</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🛝 A child sliding down a slide (body rubbing against slide):</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c21-pic4', 'friction')">Contact Force - Friction</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic4', 'gravity')">Non-Contact Force - Gravity only</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic4', 'magnetic')">Non-Contact Force - Magnetism</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🎈 A balloon sticking to a wall after rubbing it on your hair:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c21-pic5', 'push')">Contact Force - Push</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic5', 'static')">Non-Contact Force - Static Electricity</div>
-                                <div class="option" onclick="selectOption(this, 'c21-pic5', 'friction')">Contact Force - Friction</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC21PictureMatch()">Check Picture Matching!</button>
-                    <div id="c21-picture-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
-                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
-                    <p>Complete the sentences about forces. Type your answers in the boxes!</p>
-                    
-                    <div id="c21-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                    <div id="d21-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. A <input type="text" id="c21-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force happens when two objects touch each other.
+                                1. A structure is a supporting <input type="text" id="d21-blank1" style="width: 200px;"> that holds a load.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. <input type="text" id="c21-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> is a non-contact force that pulls everything toward Earth.
+                                2. Every structure has a definite <input type="text" id="d21-blank2" style="width: 150px;">, shape, and function.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. When you rub your feet on carpet and then touch a doorknob, you might feel a shock from <input type="text" id="c21-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
+                                3. Trees, shells, and bones are examples of <input type="text" id="d21-blank3" style="width: 200px;"> structures.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. <input type="text" id="c21-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> is a contact force that slows things down when surfaces rub together.
+                                4. Houses, bridges, and towers are examples of <input type="text" id="d21-blank4" style="width: 200px;"> structures.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Magnets can attract or repel metal objects using <input type="text" id="c21-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">, which is a non-contact force.
+                                5. A structure's <input type="text" id="d21-blank5" style="width: 200px;"> is what it's designed to do or its purpose.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. When surfaces rub together and slow down movement, this is called <input type="text" id="c21-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
+                                6. The <input type="text" id="d21-blank6" style="width: 150px;"> of a structure is its particular form or outline.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. A <input type="text" id="c21-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force requires objects to touch each other to work.
+                                7. A <input type="text" id="d21-blank7" style="width: 150px;"> is the weight that a structure must support.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. The force that makes a balloon stick to a wall after rubbing it is <input type="text" id="c21-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
+                                8. Your skeleton is a natural structure that <input type="text" id="d21-blank8" style="width: 200px;"> your body.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Magnets use <input type="text" id="c21-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> to attract or repel objects without touching them.
+                                9. A bridge's function is to <input type="text" id="d21-blank9" style="width: 200px;"> two areas across a gap.
                             </p>
                         </div>
 
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
                             <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. When you drop something and it falls to the ground, <input type="text" id="c21-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> is pulling it down.
+                                10. Both natural and built structures must have a <input type="text" id="d21-blank10" style="width: 200px;"> framework to support them.
                             </p>
                         </div>
                     </div>
 
-                    <button class="btn btn-check" onclick="checkC21FillBlanks()">Check My Answers!</button>
-                    <div id="c21-fillblank-feedback" class="feedback"></div>
+                    <button class="btn btn-check" onclick="checkD21FillBlanks()">Check My Answers!</button>
+                    <div id="d21-fillblank-feedback" class="feedback"></div>
                 </div>
 
                 <div class="quiz-box">
                     <h3>📝 Quiz Time!</h3>
-                    <div id="c21-quiz"></div>
-                    <button class="btn btn-check" onclick="checkQuiz('c21')" style="margin-top: 1.5rem;">Submit Quiz</button>
-                    <div id="c21-quiz-score" class="score-display" style="display: none;"></div>
+                    <div id="d21-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d21')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d21-quiz-score" class="score-display" style="display: none;"></div>
                 </div>
 
                 <div style="text-align: center;">
@@ -1005,205 +947,13 @@
             </div>
         </div>
 
-        <!-- C2.2 PAGE -->
-        <div id="c22" class="page">
-            <div class="card" style="border-color: #EC4899;">
-                <h2>C2.2 - Ways to Exert Forces ✋</h2>
-                <p>There are many different ways we can apply forces to objects!</p>
-
-                <h3>Different Ways to Apply Force</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #7C3AED;">
-                        <div class="icon">🤜</div>
-                        <h4>Direct Contact</h4>
-                        <p>Touching with hands or body!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">🏏</div>
-                        <h4>Using Tools</h4>
-                        <p>Bats, hammers, or sticks!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">💨</div>
-                        <h4>Air Pressure</h4>
-                        <p>Blowing or wind power!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">⚙️</div>
-                        <h4>Machines</h4>
-                        <p>Levers, pulleys, wheels!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">🌊</div>
-                        <h4>Water Pressure</h4>
-                        <p>Flow of water pushes!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #A855F7;">
-                        <div class="icon">🧲</div>
-                        <h4>Magnetic Force</h4>
-                        <p>Magnets without touching!</p>
-                    </div>
-                </div>
-
-                <div class="activity-box">
-                    <h3>🎯 Activity: Match the Method!</h3>
-                    <p>Match each action with how the force is being applied!</p>
-                    
-                    <div id="c22-matching" style="display: grid; gap: 1.5rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #7C3AED;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">1. Hitting a baseball with a bat:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c22-q1', 'tool')">🏏 Using a tool</div>
-                                <div class="option" onclick="selectOption(this, 'c22-q1', 'air')">💨 Air pressure</div>
-                                <div class="option" onclick="selectOption(this, 'c22-q1', 'magnetic')">🧲 Magnetic force</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #7C3AED;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">2. Moving a metal can with a magnet:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c22-q2', 'direct')">🤜 Direct contact</div>
-                                <div class="option" onclick="selectOption(this, 'c22-q2', 'magnetic')">🧲 Magnetic force</div>
-                                <div class="option" onclick="selectOption(this, 'c22-q2', 'water')">🌊 Water pressure</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #7C3AED;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">3. Blowing out birthday candles:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c22-q3', 'machine')">⚙️ Using machines</div>
-                                <div class="option" onclick="selectOption(this, 'c22-q3', 'air')">💨 Air pressure</div>
-                                <div class="option" onclick="selectOption(this, 'c22-q3', 'direct')">🤜 Direct contact</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC22Activity()">Check My Matches!</button>
-                    <div id="c22-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
-                    <h3>🎯 Activity 2: Drag & Drop - Methods of Force!</h3>
-                    <p>Drag each example to the correct method of applying force!</p>
-                    
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c22-drag-items">
-                        <div class="drag-item" draggable="true" data-category="direct">👐 Pushing door with hands</div>
-                        <div class="drag-item" draggable="true" data-category="tool">🏏 Hitting ball with bat</div>
-                        <div class="drag-item" draggable="true" data-category="air">💨 Blowing out candles</div>
-                        <div class="drag-item" draggable="true" data-category="magnetic">🧲 Moving paperclips with magnet</div>
-                        <div class="drag-item" draggable="true" data-category="machine">⚙️ Using pulley to lift box</div>
-                        <div class="drag-item" draggable="true" data-category="tool">🔨 Hammering a nail</div>
-                        <div class="drag-item" draggable="true" data-category="air">🎈 Balloon moving from air</div>
-                        <div class="drag-item" draggable="true" data-category="direct">✋ Catching a ball</div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                        <div>
-                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.3rem;">👐 Direct Contact</h4>
-                            <div class="drop-zone" data-category="direct"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #EC4899; font-size: 1.3rem;">🔨 Using Tools</h4>
-                            <div class="drop-zone" data-category="tool"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #F59E0B; font-size: 1.3rem;">💨 Air Pressure</h4>
-                            <div class="drop-zone" data-category="air"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #10B981; font-size: 1.3rem;">⚙️ Machines</h4>
-                            <div class="drop-zone" data-category="machine"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #A855F7; font-size: 1.3rem;">🧲 Magnetic Force</h4>
-                            <div class="drop-zone" data-category="magnetic"></div>
-                        </div>
-                    </div>
-
-                    <div class="button-group">
-                        <button class="btn btn-check" onclick="checkC22DragDrop()">Check My Sorting!</button>
-                        <button class="btn btn-reset" onclick="resetC22DragDrop()">Reset</button>
-                    </div>
-                    <div id="c22-drag-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
-                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
-                    <p>Complete the sentences about ways to exert forces!</p>
-                    
-                    <div id="c22-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. When you use a hammer to hit a nail, you are using a <input type="text" id="c22-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> to exert force.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. <input type="text" id="c22-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> is when you push or pull something with your hands or body.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. When you blow on a pinwheel and make it spin, you are using <input type="text" id="c22-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. A <input type="text" id="c22-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> can attract metal objects without touching them.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Simple <input type="text" id="c22-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> like levers and pulleys help us apply force more easily.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. A bat is a <input type="text" id="c22-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> that helps you apply more force to a baseball.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. You can exert force on an object even without <input type="text" id="c22-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> it, using magnets or gravity.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Blowing up a balloon and letting it go uses <input type="text" id="c22-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> from the escaping air.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. When water flows and pushes a water wheel, it uses <input type="text" id="c22-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;">.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. When you use a screwdriver to turn a screw, the screwdriver is a <input type="text" id="c22-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> that helps apply force.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC22FillBlanks()">Check My Answers!</button>
-                    <div id="c22-fillblank-feedback" class="feedback"></div>
-                </div>
-
-                <div class="quiz-box">
-                    <h3>📝 Quiz Time!</h3>
-                    <div id="c22-quiz"></div>
-                    <button class="btn btn-check" onclick="checkQuiz('c22')" style="margin-top: 1.5rem;">Submit Quiz</button>
-                    <div id="c22-quiz-score" class="score-display" style="display: none;"></div>
-                </div>
-
+        <!-- D1.1 PAGE - TEMPLATE (Copy D2.1 pattern and modify content) -->
+        <div id="d11" class="page">
+            <div class="card" style="border-color: var(--pink);">
+                <h2>D1.1 - Effects on Society & Environment 🌍</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern above!</p>
+                <p>Include: Educational content, Drag-Drop activity, 10 Fill-in-Blanks, Quiz</p>
+                
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1212,214 +962,12 @@
             </div>
         </div>
 
-        <!-- C2.3 PAGE -->
-        <div id="c23" class="page">
-            <div class="card" style="border-color: #F59E0B;">
-                <h2>C2.3 - Effects of Forces 🎯</h2>
-                <p>Forces can make objects <strong>start moving, stop moving, change direction, change speed, or change shape</strong>!</p>
-
-                <h3>What Can Forces Do?</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">🚀</div>
-                        <h4>Start Moving</h4>
-                        <p>Push a toy car to make it go!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🛑</div>
-                        <h4>Stop Moving</h4>
-                        <p>Catch a ball to stop it!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">↩️</div>
-                        <h4>Change Direction</h4>
-                        <p>Kick a rolling ball sideways!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">⚡</div>
-                        <h4>Change Speed</h4>
-                        <p>Pedal faster to speed up bike!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #A855F7;">
-                        <div class="icon">🎈</div>
-                        <h4>Change Shape</h4>
-                        <p>Squeeze playdough or balloon!</p>
-                    </div>
-                </div>
-
-                <h3>Magnitude of Force 💪</h3>
-                <p><strong>Magnitude</strong> means the size or strength of a force. A bigger force creates a bigger change!</p>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">🐌</div>
-                        <h4>Small Force</h4>
-                        <p>Gentle push = slow movement!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">🚴</div>
-                        <h4>Medium Force</h4>
-                        <p>Normal push = medium speed!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🚀</div>
-                        <h4>Large Force</h4>
-                        <p>Hard push = fast movement!</p>
-                    </div>
-                </div>
-
-                <div class="activity-box">
-                    <h3>🎯 Activity 1: Force Simulator!</h3>
-                    <p>Click the buttons to apply different forces and see what happens to the ball!</p>
-                    
-                    <div class="visual-demo">
-                        <div style="position: relative; height: 200px; margin: 2rem 0; background: linear-gradient(180deg, #DBEAFE 0%, #93C5FD 100%); border-radius: 15px; overflow: hidden;">
-                            <div id="c23-ball" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: linear-gradient(135deg, #EC4899, #F59E0B); border-radius: 50%; transition: all 0.5s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></div>
-                        </div>
-                        
-                        <div class="button-group" style="justify-content: center;">
-                            <button class="btn" onclick="applyC23Force('start')" style="background: linear-gradient(135deg, #10B981, #059669);">▶️ Start Moving</button>
-                            <button class="btn" onclick="applyC23Force('stop')" style="background: linear-gradient(135deg, #EF4444, #DC2626);">⏹️ Stop</button>
-                            <button class="btn" onclick="applyC23Force('direction')" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">↩️ Change Direction</button>
-                            <button class="btn" onclick="applyC23Force('shape')" style="background: linear-gradient(135deg, #A855F7, #9333EA);">🎈 Change Shape</button>
-                            <button class="btn btn-reset" onclick="resetC23Ball()">🔄 Reset</button>
-                        </div>
-                        
-                        <p id="c23-message" style="font-size: 1.3rem; margin-top: 2rem; font-weight: 700; min-height: 3rem; color: #7C3AED;"></p>
-                    </div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
-                    <h3>🎯 Activity 2: Picture Analysis Challenge!</h3>
-                    <p>Look at each scenario and identify what effect the force is having!</p>
-                    
-                    <div id="c23-picture-match" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">⚽ A soccer player kicks a ball that was sitting still on the ground:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c23-pic1', 'start')">The force makes it START moving</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic1', 'stop')">The force makes it STOP moving</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic1', 'shape')">The force changes its SHAPE</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🏒 A hockey goalie catches a puck flying toward the net:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c23-pic2', 'start')">The force makes it START moving</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic2', 'stop')">The force makes it STOP moving</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic2', 'direction')">The force changes its DIRECTION</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🎾 A tennis racket hits a ball, sending it in a different direction:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c23-pic3', 'direction')">The force changes its DIRECTION</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic3', 'shape')">The force only changes its SHAPE</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic3', 'stop')">The force makes it STOP</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🚴 A cyclist pedals harder and the bike goes faster and faster:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c23-pic4', 'speed')">The force changes its SPEED (makes it faster)</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic4', 'stop')">The force makes it STOP</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic4', 'shape')">The force changes its SHAPE</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #F59E0B;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🥤 Someone squeezes an aluminum can and it crumples:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c23-pic5', 'shape')">The force changes its SHAPE</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic5', 'direction')">The force changes its DIRECTION</div>
-                                <div class="option" onclick="selectOption(this, 'c23-pic5', 'speed')">The force changes its SPEED</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC23PictureMatch()">Check Picture Analysis!</button>
-                    <div id="c23-picture-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%); border-color: #A855F7;">
-                    <h3>🎯 Activity 3: Fill in the Blanks - Force Effects!</h3>
-                    <p>Complete the sentences about how forces affect objects!</p>
-                    
-                    <div id="c23-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. The <input type="text" id="c23-blank1" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> of a force means how strong or weak it is.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. A force can make an object start moving, <input type="text" id="c23-blank2" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> moving, or change direction.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. A bigger force will cause a <input type="text" id="c23-blank3" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> change in motion than a smaller force.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. When you squeeze playdough, the force changes its <input type="text" id="c23-blank4" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. To change the <input type="text" id="c23-blank5" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> of a moving object, you need to apply a force.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. A force can make an object start moving, stop moving, change <input type="text" id="c23-blank6" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">, change speed, or change shape.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. If you want a toy car to go faster, you need to apply a <input type="text" id="c23-blank7" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. When you catch a flying ball, you apply a force to make it <input type="text" id="c23-blank8" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Squeezing clay changes its <input type="text" id="c23-blank9" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #A855F7;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Forces of different <input type="text" id="c23-blank10" style="border: 2px solid #A855F7; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> will have different effects on objects.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC23FillBlanks()">Check My Answers!</button>
-                    <div id="c23-fillblank-feedback" class="feedback"></div>
-                </div>
-
-                <div class="quiz-box">
-                    <h3>📝 Quiz Time!</h3>
-                    <div id="c23-quiz"></div>
-                    <button class="btn btn-check" onclick="checkQuiz('c23')" style="margin-top: 1.5rem;">Submit Quiz</button>
-                    <div id="c23-quiz-score" class="score-display" style="display: none;"></div>
-                </div>
-
+        <!-- D1.2 PAGE - TEMPLATE -->
+        <div id="d12" class="page">
+            <div class="card" style="border-color: var(--yellow);">
+                <h2>D1.2 - Environmental Impact 🦫</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1428,207 +976,12 @@
             </div>
         </div>
 
-        <!-- C2.4 PAGE -->
-        <div id="c24" class="page">
-            <div class="card" style="border-color: #10B981;">
-                <h2>C2.4 - Forces in Daily Life 🏃</h2>
-                <p>We use forces every single day in so many ways! Let's explore how forces help us!</p>
-
-                <h3>Forces You Use Every Day</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #7C3AED;">
-                        <div class="icon">🚪</div>
-                        <h4>Opening Doors</h4>
-                        <p>Pull or push force!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">✏️</div>
-                        <h4>Writing</h4>
-                        <p>Push pencil on paper!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">🚴</div>
-                        <h4>Riding Bikes</h4>
-                        <p>Push pedals to move!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">🏀</div>
-                        <h4>Playing Sports</h4>
-                        <p>Throw, kick, catch!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">🪜</div>
-                        <h4>Climbing Stairs</h4>
-                        <p>Push against gravity!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🧹</div>
-                        <h4>Cleaning</h4>
-                        <p>Push broom or vacuum!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #A855F7;">
-                        <div class="icon">🎮</div>
-                        <h4>Playing Games</h4>
-                        <p>Press buttons, move pieces!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #14B8A6;">
-                        <div class="icon">🍳</div>
-                        <h4>Cooking</h4>
-                        <p>Stir, flip, pour!</p>
-                    </div>
-                </div>
-
-                <div class="activity-box">
-                    <h3>🎯 Activity 1: Find the Forces!</h3>
-                    <p>Look at each daily activity and identify what type of force is being used!</p>
-                    
-                    <div id="c24-activities" style="display: grid; gap: 1.5rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #7C3AED;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🎒 1. Carrying your backpack to school:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c24-q1', 'gravity')">⬇️ Fighting gravity (lifting)</div>
-                                <div class="option" onclick="selectOption(this, 'c24-q1', 'magnetic')">🧲 Magnetic force</div>
-                                <div class="option" onclick="selectOption(this, 'c24-q1', 'friction')">🧊 Friction only</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #7C3AED;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🛹 2. Skateboarding and then stopping:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c24-q2', 'friction')">🧊 Friction (from ground/brakes)</div>
-                                <div class="option" onclick="selectOption(this, 'c24-q2', 'gravity')">⬇️ Only gravity</div>
-                                <div class="option" onclick="selectOption(this, 'c24-q2', 'air')">💨 Only air pressure</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #7C3AED;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🪁 3. Flying a kite in the park:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c24-q3', 'wind')">💨 Wind force (air pressure)</div>
-                                <div class="option" onclick="selectOption(this, 'c24-q3', 'magnetic')">🧲 Magnetic force</div>
-                                <div class="option" onclick="selectOption(this, 'c24-q3', 'friction')">🧊 Only friction</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC24Activity()">Check My Answers!</button>
-                    <div id="c24-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
-                    <h3>🎯 Activity 2: Drag & Drop - Daily Forces!</h3>
-                    <p>Drag each daily activity to the type of force being used!</p>
-                    
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c24-drag-items">
-                        <div class="drag-item" draggable="true" data-category="push">🚪 Opening a door</div>
-                        <div class="drag-item" draggable="true" data-category="friction">🚲 Using bike brakes</div>
-                        <div class="drag-item" draggable="true" data-category="push">✏️ Writing with pencil</div>
-                        <div class="drag-item" draggable="true" data-category="gravity">🪜 Climbing stairs</div>
-                        <div class="drag-item" draggable="true" data-category="push">🧹 Sweeping floor</div>
-                        <div class="drag-item" draggable="true" data-category="push">🏀 Bouncing basketball</div>
-                        <div class="drag-item" draggable="true" data-category="friction">🏃 Running (feet on ground)</div>
-                        <div class="drag-item" draggable="true" data-category="gravity">🎒 Carrying backpack</div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                        <div>
-                            <h4 style="text-align: center; color: #10B981; font-size: 1.3rem;">👐 Push Forces</h4>
-                            <div class="drop-zone" data-category="push"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #EF4444; font-size: 1.3rem;">🧊 Friction Forces</h4>
-                            <div class="drop-zone" data-category="friction"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.3rem;">⬇️ Gravity Forces</h4>
-                            <div class="drop-zone" data-category="gravity"></div>
-                        </div>
-                    </div>
-
-                    <div class="button-group">
-                        <button class="btn btn-check" onclick="checkC24DragDrop()">Check My Sorting!</button>
-                        <button class="btn btn-reset" onclick="resetC24DragDrop()">Reset</button>
-                    </div>
-                    <div id="c24-drag-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
-                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
-                    <p>Complete the sentences about forces in daily life!</p>
-                    
-                    <div id="c24-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. When you walk or run, <input type="text" id="c24-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> between your shoes and the ground keeps you from slipping.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Every time you climb stairs, you are working against <input type="text" id="c24-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> to move upward.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. When you write with a pencil, you <input type="text" id="c24-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> the pencil against the paper.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. Riding a bike uses <input type="text" id="c24-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> forces when you pedal and friction when you brake.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Opening a door can use either a push force or a <input type="text" id="c24-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. When you brush your teeth, you use a <input type="text" id="c24-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force to move the toothbrush.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. <input type="text" id="c24-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> helps a soccer ball slow down and stop after you kick it.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. When you carry your backpack, you use force to work against <input type="text" id="c24-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;">.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Playing catch involves both <input type="text" id="c24-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> the ball and catching it.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. We use <input type="text" id="c24-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> every single day to do almost everything we do.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC24FillBlanks()">Check My Answers!</button>
-                    <div id="c24-fillblank-feedback" class="feedback"></div>
-                </div>
-
-                <div class="quiz-box">
-                    <h3>📝 Quiz Time!</h3>
-                    <div id="c24-quiz"></div>
-                    <button class="btn btn-check" onclick="checkQuiz('c24')" style="margin-top: 1.5rem;">Submit Quiz</button>
-                    <div id="c24-quiz-score" class="score-display" style="display: none;"></div>
-                </div>
-
+        <!-- D2.2 PAGE - TEMPLATE -->
+        <div id="d22" class="page">
+            <div class="card" style="border-color: var(--blue);">
+                <h2>D2.2 - Form & Function 🎨</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1637,242 +990,12 @@
             </div>
         </div>
 
-        <!-- C1.1 PAGE -->
-        <div id="c11" class="page">
-            <div class="card" style="border-color: #3B82F6;">
-                <h2>C1.1 - Natural Forces & Their Effects 🌪️</h2>
-                <p>Natural forces from nature can affect our environment in powerful ways!</p>
-
-                <h3>Forces from Natural Phenomena</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">💨</div>
-                        <h4>Wind</h4>
-                        <p>Can blow down trees or power windmills!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #06B6D4;">
-                        <div class="icon">🌊</div>
-                        <h4>Water Flow</h4>
-                        <p>Carves valleys or causes floods!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">🌋</div>
-                        <h4>Earthquakes</h4>
-                        <p>Shake ground and buildings!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">⚡</div>
-                        <h4>Lightning</h4>
-                        <p>Electrical force from storms!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🌡️</div>
-                        <h4>Heat/Cold</h4>
-                        <p>Expands or contracts materials!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #A855F7;">
-                        <div class="icon">❄️</div>
-                        <h4>Ice/Snow</h4>
-                        <p>Weight can damage structures!</p>
-                    </div>
-                </div>
-
-                <h3>How We Can Reduce Harmful Effects 🛡️</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">🌳</div>
-                        <h4>Plant Trees</h4>
-                        <p>Reduce wind and water erosion!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">🏗️</div>
-                        <h4>Strong Buildings</h4>
-                        <p>Built to withstand forces!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">⚠️</div>
-                        <h4>Warning Systems</h4>
-                        <p>Alert people of danger!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">🌊</div>
-                        <h4>Barriers</h4>
-                        <p>Walls to protect from floods!</p>
-                    </div>
-                </div>
-
-                <h3>How We Can Enhance Helpful Effects ⚡</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">💨</div>
-                        <h4>Wind Turbines</h4>
-                        <p>Use wind for electricity!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #06B6D4;">
-                        <div class="icon">💧</div>
-                        <h4>Hydroelectric Dams</h4>
-                        <p>Use water flow for power!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">☀️</div>
-                        <h4>Solar Panels</h4>
-                        <p>Capture sun's energy!</p>
-                    </div>
-                </div>
-
-                <div class="activity-box">
-                    <h3>🎯 Activity: Natural Force Effects!</h3>
-                    <p>Match each natural force with its effect and what we can do about it!</p>
-                    
-                    <div id="c11-scenarios" style="display: grid; gap: 1.5rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🌪️ Strong winds near your home:</p>
-                            <p style="margin-bottom: 1rem;">What can help protect your home?</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c11-q1', 'trees')">🌳 Plant strong trees as windbreaks</div>
-                                <div class="option" onclick="selectOption(this, 'c11-q1', 'nothing')">Do nothing</div>
-                                <div class="option" onclick="selectOption(this, 'c11-q1', 'remove')">Remove all trees</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🌊 River that floods during rain:</p>
-                            <p style="margin-bottom: 1rem;">How can we reduce flood damage?</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c11-q2', 'barriers')">🌊 Build barriers and walls</div>
-                                <div class="option" onclick="selectOption(this, 'c11-q2', 'build')">Build houses in the flood zone</div>
-                                <div class="option" onclick="selectOption(this, 'c11-q2', 'ignore')">Ignore the water</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">💨 Lots of wind in your area:</p>
-                            <p style="margin-bottom: 1rem;">How can we use this helpfully?</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c11-q3', 'turbines')">💨 Build wind turbines for electricity</div>
-                                <div class="option" onclick="selectOption(this, 'c11-q3', 'hide')">Hide from the wind</div>
-                                <div class="option" onclick="selectOption(this, 'c11-q3', 'stop')">Try to stop all wind</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC11Activity()">Check My Answers!</button>
-                    <div id="c11-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
-                    <h3>🎯 Activity 2: Drag & Drop - Natural Forces!</h3>
-                    <p>Drag each natural event to the force that causes it!</p>
-                    
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c11-drag-items">
-                        <div class="drag-item" draggable="true" data-category="gravity">🍂 Leaves falling from trees</div>
-                        <div class="drag-item" draggable="true" data-category="water">🌊 Waves crashing on beach</div>
-                        <div class="drag-item" draggable="true" data-category="wind">🌪️ Trees bending in storm</div>
-                        <div class="drag-item" draggable="true" data-category="gravity">❄️ Snow weighing down branches</div>
-                        <div class="drag-item" draggable="true" data-category="gravity">🌋 Rocks rolling down hill</div>
-                        <div class="drag-item" draggable="true" data-category="wind">💨 Dust blowing across desert</div>
-                        <div class="drag-item" draggable="true" data-category="gravity">🏔️ Avalanche sliding down mountain</div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                        <div>
-                            <h4 style="text-align: center; color: #7C3AED; font-size: 1.3rem;">⬇️ Gravity</h4>
-                            <div class="drop-zone" data-category="gravity"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #3B82F6; font-size: 1.3rem;">💨 Wind Force</h4>
-                            <div class="drop-zone" data-category="wind"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #06B6D4; font-size: 1.3rem;">🌊 Water Force</h4>
-                            <div class="drop-zone" data-category="water"></div>
-                        </div>
-                    </div>
-
-                    <div class="button-group">
-                        <button class="btn btn-check" onclick="checkC11DragDrop()">Check My Sorting!</button>
-                        <button class="btn btn-reset" onclick="resetC11DragDrop()">Reset</button>
-                    </div>
-                    <div id="c11-drag-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
-                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
-                    <p>Complete the sentences about natural forces!</p>
-                    
-                    <div id="c11-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. <input type="text" id="c11-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> is a powerful force from nature that can knock down trees and damage buildings.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. Strong <input type="text" id="c11-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> from rivers and oceans can erode land and carve valleys.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. <input type="text" id="c11-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> shake the ground and can damage structures.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. We can use <input type="text" id="c11-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> force to generate electricity with wind turbines.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. <input type="text" id="c11-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> dams use water flow to create electricity.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Planting <input type="text" id="c11-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> can help reduce erosion from wind and water.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. <input type="text" id="c11-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> systems warn people about dangerous storms and natural disasters.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Building strong <input type="text" id="c11-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> helps protect against earthquakes and strong winds.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. <input type="text" id="c11-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> panels capture the sun's energy to make electricity.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. Flood <input type="text" id="c11-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protect areas from water damage.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC11FillBlanks()">Check My Answers!</button>
-                    <div id="c11-fillblank-feedback" class="feedback"></div>
-                </div>
-
-                <div class="quiz-box">
-                    <h3>📝 Quiz Time!</h3>
-                    <div id="c11-quiz"></div>
-                    <button class="btn btn-check" onclick="checkQuiz('c11')" style="margin-top: 1.5rem;">Submit Quiz</button>
-                    <div id="c11-quiz-score" class="score-display" style="display: none;"></div>
-                </div>
-
+        <!-- D2.3 PAGE - TEMPLATE -->
+        <div id="d23" class="page">
+            <div class="card" style="border-color: var(--purple);">
+                <h2>D2.3 - Strength of Structures 💪</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1881,240 +1004,54 @@
             </div>
         </div>
 
-        <!-- C1.2 PAGE -->
-        <div id="c12" class="page">
-            <div class="card" style="border-color: #EF4444;">
-                <h2>C1.2 - Safety & Protection 🛡️</h2>
-                <p>Some forces from human activities can be harmful, but we have ways to stay safe!</p>
-
-                <h3>Harmful Forces from Human Activities</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🚗</div>
-                        <h4>Car Crashes</h4>
-                        <p>Impact forces can hurt people!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">🏗️</div>
-                        <h4>Falling Objects</h4>
-                        <p>Gravity pulls things down!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">⚡</div>
-                        <h4>Electrical</h4>
-                        <p>Shocks from electricity!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #A855F7;">
-                        <div class="icon">🔥</div>
-                        <h4>Burns</h4>
-                        <p>Heat force from fire/hot objects!</p>
-                    </div>
+        <!-- D2.4 PAGE - TEMPLATE -->
+        <div id="d24" class="page">
+            <div class="card" style="border-color: var(--orange);">
+                <h2>D2.4 - Stability ⚖️</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <h3>Safety Devices That Protect Us 🦺</h3>
-                <div class="example-grid">
-                    <div class="example-card" style="border-color: #10B981;">
-                        <div class="icon">🪖</div>
-                        <h4>Helmets</h4>
-                        <p>Protect head from impacts!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #3B82F6;">
-                        <div class="icon">🔒</div>
-                        <h4>Seatbelts</h4>
-                        <p>Keep you in place during crashes!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #06B6D4;">
-                        <div class="icon">🎒</div>
-                        <h4>Airbags</h4>
-                        <p>Cushion impacts in cars!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #14B8A6;">
-                        <div class="icon">🦺</div>
-                        <h4>Padding</h4>
-                        <p>Knee/elbow pads for sports!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #F59E0B;">
-                        <div class="icon">🧤</div>
-                        <h4>Safety Gloves</h4>
-                        <p>Protect hands from sharp/hot things!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EF4444;">
-                        <div class="icon">🚧</div>
-                        <h4>Barriers</h4>
-                        <p>Keep people away from danger!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #7C3AED;">
-                        <div class="icon">👓</div>
-                        <h4>Safety Goggles</h4>
-                        <p>Protect eyes from flying objects!</p>
-                    </div>
-                    <div class="example-card" style="border-color: #EC4899;">
-                        <div class="icon">🦺</div>
-                        <h4>Life Jackets</h4>
-                        <p>Keep you floating in water!</p>
-                    </div>
+        <!-- D2.5 PAGE - TEMPLATE -->
+        <div id="d25" class="page">
+            <div class="card" style="border-color: var(--teal);">
+                <h2>D2.5 - Material Properties 🧱</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <div class="activity-box">
-                    <h3>🎯 Activity: Match Safety to Situation!</h3>
-                    <p>Choose the best safety device for each situation!</p>
-                    
-                    <div id="c12-situations" style="display: grid; gap: 1.5rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #EF4444;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🚴 1. Riding your bicycle:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c12-q1', 'helmet')">🪖 Helmet</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q1', 'gloves')">🧤 Oven mitts</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q1', 'life')">🦺 Life jacket</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #EF4444;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🚗 2. Riding in a car:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c12-q2', 'seatbelt')">🔒 Seatbelt</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q2', 'goggles')">👓 Goggles</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q2', 'nothing')">Nothing needed</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #EF4444;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">⛵ 3. Going on a boat:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c12-q3', 'life')">🦺 Life jacket</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q3', 'helmet')">🪖 Helmet only</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q3', 'gloves')">🧤 Safety gloves</div>
-                            </div>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #EF4444;">
-                            <p style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem;">🛹 4. Skateboarding at the park:</p>
-                            <div class="options">
-                                <div class="option" onclick="selectOption(this, 'c12-q4', 'pads')">🦺 Helmet and knee/elbow pads</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q4', 'seatbelt')">🔒 Seatbelt</div>
-                                <div class="option" onclick="selectOption(this, 'c12-q4', 'life')">🦺 Life jacket</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC12Activity()">Check My Safety Choices!</button>
-                    <div id="c12-feedback" class="feedback"></div>
+        <!-- D2.6 PAGE - TEMPLATE -->
+        <div id="d26" class="page">
+            <div class="card" style="border-color: var(--red);">
+                <h2>D2.6 - Forces on Structures 💨</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
+                <div style="text-align: center;">
+                    <button class="back-button bottom-back-button" onclick="showPage('home', event)">
+                        ← Back to Lessons
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <div class="activity-box" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-color: #F59E0B;">
-                    <h3>🎯 Activity 2: Drag & Drop - Safety Equipment!</h3>
-                    <p>Drag each activity to the safety equipment needed!</p>
-                    
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="c12-drag-items">
-                        <div class="drag-item" draggable="true" data-category="helmet">🚴 Riding a bicycle</div>
-                        <div class="drag-item" draggable="true" data-category="seatbelt">🚗 Riding in a car</div>
-                        <div class="drag-item" draggable="true" data-category="lifejacket">⛵ Going on a boat</div>
-                        <div class="drag-item" draggable="true" data-category="helmet">🛹 Skateboarding</div>
-                        <div class="drag-item" draggable="true" data-category="helmet">⚾ Playing baseball</div>
-                        <div class="drag-item" draggable="true" data-category="helmet">🏗️ Construction work</div>
-                        <div class="drag-item" draggable="true" data-category="helmet">🧗 Rock climbing</div>
-                        <div class="drag-item" draggable="true" data-category="lifejacket">🏊 Swimming in deep water</div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                        <div>
-                            <h4 style="text-align: center; color: #F59E0B; font-size: 1.3rem;">🪖 Helmet Protection</h4>
-                            <div class="drop-zone" data-category="helmet"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #EF4444; font-size: 1.3rem;">🔒 Seatbelt/Harness</h4>
-                            <div class="drop-zone" data-category="seatbelt"></div>
-                        </div>
-                        <div>
-                            <h4 style="text-align: center; color: #3B82F6; font-size: 1.3rem;">🦺 Life Jacket</h4>
-                            <div class="drop-zone" data-category="lifejacket"></div>
-                        </div>
-                    </div>
-
-                    <div class="button-group">
-                        <button class="btn btn-check" onclick="checkC12DragDrop()">Check My Matching!</button>
-                        <button class="btn btn-reset" onclick="resetC12DragDrop()">Reset</button>
-                    </div>
-                    <div id="c12-drag-feedback" class="feedback"></div>
-                </div>
-
-                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: #3B82F6;">
-                    <h3>🎯 Activity 3: Fill in the Blanks!</h3>
-                    <p>Complete the sentences about safety and protection!</p>
-                    
-                    <div id="c12-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                1. A <input type="text" id="c12-blank1" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protects your head from impact forces when riding a bike.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                2. <input type="text" id="c12-blank2" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> keep you safe in a car by holding you in place during crashes.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                3. Life <input type="text" id="c12-blank3" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> help you float and stay safe in water.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                4. <input type="text" id="c12-blank4" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> cushion the impact when you fall during sports.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                5. Safety <input type="text" id="c12-blank5" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protect your eyes from flying objects or chemicals.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                6. Wearing the right safety <input type="text" id="c12-blank6" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> can prevent injuries from harmful forces.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                7. Car <input type="text" id="c12-blank7" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> inflate during crashes to protect passengers from impact forces.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                8. Knee and elbow <input type="text" id="c12-blank8" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> protect you when skateboarding or rollerblading.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                9. Always wear <input type="text" id="c12-blank9" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 200px; font-weight: 700;"> equipment when doing dangerous activities.
-                            </p>
-                        </div>
-
-                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid #3B82F6;">
-                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
-                                10. <input type="text" id="c12-blank10" style="border: 2px solid #3B82F6; padding: 0.5rem; font-size: 1.1rem; border-radius: 8px; width: 250px; font-weight: 700;"> protect construction workers from falling objects.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-check" onclick="checkC12FillBlanks()">Check My Answers!</button>
-                    <div id="c12-fillblank-feedback" class="feedback"></div>
-                </div>
-
-                <div class="quiz-box">
-                    <h3>📝 Quiz Time!</h3>
-                    <div id="c12-quiz"></div>
-                    <button class="btn btn-check" onclick="checkQuiz('c12')" style="margin-top: 1.5rem;">Submit Quiz</button>
-                    <div id="c12-quiz-score" class="score-display" style="display: none;"></div>
-                </div>
-
+        <!-- D2.7 PAGE - TEMPLATE -->
+        <div id="d27" class="page">
+            <div class="card" style="border-color: var(--pink);">
+                <h2>D2.7 - Struts & Ties 🔗</h2>
+                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
+                
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -2125,192 +1062,32 @@
     </div>
 
     <script>
-        // Create starfield
-        const starfield = document.getElementById('starfield');
-        for (let i = 0; i < 100; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.width = star.style.height = Math.random() * 3 + 'px';
-            star.style.animationDelay = Math.random() * 3 + 's';
-            starfield.appendChild(star);
-        }
-
-        // Create particles
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            const colors = ['#7C3AED', '#EC4899', '#F59E0B', '#10B981', '#3B82F6'];
-            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.width = particle.style.height = Math.random() * 10 + 5 + 'px';
-            particle.style.animationDelay = Math.random() * 15 + 's';
-            particle.style.animationDuration = Math.random() * 10 + 10 + 's';
-            document.body.appendChild(particle);
-        }
-
-        // Quiz Questions Database
+        // Quiz Data
         const quizData = {
-            c21: [
+            d21: [
                 {
-                    question: "What is a contact force?",
-                    options: ["A force that needs objects to touch", "A force that works through distance", "Only gravity", "Only magnetism"],
+                    question: "What is a structure?",
+                    options: ["Something that moves", "A supporting framework that holds a load", "A type of animal", "A kind of food"],
+                    correct: 1
+                },
+                {
+                    question: "Which is a natural structure?",
+                    options: ["Bridge", "Tree trunk", "House", "Chair"],
+                    correct: 1
+                },
+                {
+                    question: "What must every structure have?",
+                    options: ["A definite size, shape, and function", "Wheels", "Windows", "Paint"],
                     correct: 0
                 },
                 {
-                    question: "Which is a non-contact force?",
-                    options: ["Pushing a door", "Friction from brakes", "Gravity pulling an apple down", "Kicking a ball"],
-                    correct: 2
+                    question: "Which is a built structure?",
+                    options: ["Mountain", "Seashell", "Skeleton", "Tower"],
+                    correct: 3
                 },
                 {
-                    question: "When you pull a wagon, what type of force is it?",
-                    options: ["Non-contact force", "Contact force", "No force at all", "Only magnetic"],
-                    correct: 1
-                },
-                {
-                    question: "Which force can work without touching?",
-                    options: ["Pushing", "Pulling", "Magnetism", "Friction"],
-                    correct: 2
-                },
-                {
-                    question: "Friction is an example of:",
-                    options: ["Non-contact force", "Contact force", "Gravity only", "Magnetism"],
-                    correct: 1
-                }
-            ],
-            c22: [
-                {
-                    question: "How can you exert a force on a baseball?",
-                    options: ["Only by touching it", "Using a bat to hit it", "Only with magnets", "You cannot apply force to a baseball"],
-                    correct: 1
-                },
-                {
-                    question: "Which is a way to apply force using air?",
-                    options: ["Hitting with a bat", "Blowing out candles", "Pushing with hands", "Using a magnet"],
-                    correct: 1
-                },
-                {
-                    question: "When you use a hammer to hit a nail, you are:",
-                    options: ["Using a tool to exert force", "Using magnetic force", "Not using force", "Using only air pressure"],
-                    correct: 0
-                },
-                {
-                    question: "What exerts force to move a sailboat?",
-                    options: ["Magnets", "Wind (air pressure)", "Electricity only", "Friction"],
-                    correct: 1
-                },
-                {
-                    question: "Moving a metal can without touching it uses:",
-                    options: ["Direct contact", "Magnetic force", "Only friction", "No force"],
-                    correct: 1
-                }
-            ],
-            c23: [
-                {
-                    question: "What can a force do to an object?",
-                    options: ["Only change its color", "Start, stop, or change its motion", "Only make it bigger", "Nothing at all"],
-                    correct: 1
-                },
-                {
-                    question: "What does 'magnitude' of a force mean?",
-                    options: ["The color of the force", "The size or strength of the force", "Where the force comes from", "The direction only"],
-                    correct: 1
-                },
-                {
-                    question: "A bigger force applied to a ball will:",
-                    options: ["Make it move slower", "Make it move faster or farther", "Not affect it", "Only change its color"],
-                    correct: 1
-                },
-                {
-                    question: "When you squeeze playdough, the force:",
-                    options: ["Starts it moving", "Changes its shape", "Makes it heavier", "Does nothing"],
-                    correct: 1
-                },
-                {
-                    question: "To make a rolling ball stop, you need to:",
-                    options: ["Apply a force against its motion", "Let it roll forever", "Make it bigger", "Change its color"],
-                    correct: 0
-                }
-            ],
-            c24: [
-                {
-                    question: "Which daily activity uses force?",
-                    options: ["All of these", "Opening a door", "Writing with a pencil", "Riding a bike"],
-                    correct: 0
-                },
-                {
-                    question: "When you climb stairs, you use force to work against:",
-                    options: ["Magnetism", "Gravity", "Wind", "Electricity"],
-                    correct: 1
-                },
-                {
-                    question: "Playing sports involves forces like:",
-                    options: ["Throwing, kicking, and catching", "Only sitting still", "No forces", "Only magnetism"],
-                    correct: 0
-                },
-                {
-                    question: "When riding a bike, you push the pedals to:",
-                    options: ["Do nothing", "Make the bike move forward", "Stop the bike", "Change its color"],
-                    correct: 1
-                },
-                {
-                    question: "Friction helps us when:",
-                    options: ["Stopping (brakes on bike)", "We want things to slip", "We need to fall", "Only when sleeping"],
-                    correct: 0
-                }
-            ],
-            c11: [
-                {
-                    question: "Which is a natural force?",
-                    options: ["Car engine", "Wind from a storm", "Computer", "Television"],
-                    correct: 1
-                },
-                {
-                    question: "How can planting trees help?",
-                    options: ["Make more wind", "Reduce wind and water erosion", "Stop all weather", "Make earthquakes"],
-                    correct: 1
-                },
-                {
-                    question: "What can we use wind force for?",
-                    options: ["Nothing useful", "Generating electricity with turbines", "Only causing damage", "Making it rain"],
-                    correct: 1
-                },
-                {
-                    question: "Flood barriers help to:",
-                    options: ["Create more floods", "Protect buildings from water", "Make water flow faster", "Stop all rain"],
-                    correct: 1
-                },
-                {
-                    question: "Earthquakes are forces that:",
-                    options: ["Shake the ground", "Only happen in space", "Make it sunny", "Stop all movement"],
-                    correct: 0
-                }
-            ],
-            c12: [
-                {
-                    question: "What safety device protects your head when biking?",
-                    options: ["Seatbelt", "Helmet", "Knee pads", "Nothing needed"],
-                    correct: 1
-                },
-                {
-                    question: "Why do we wear seatbelts in cars?",
-                    options: ["To look cool", "To protect us during crashes", "To make the car go faster", "No reason"],
-                    correct: 1
-                },
-                {
-                    question: "What protects you when swimming or boating?",
-                    options: ["Helmet", "Life jacket", "Seatbelt", "Nothing"],
-                    correct: 1
-                },
-                {
-                    question: "Knee and elbow pads help:",
-                    options: ["Make you faster", "Protect from impacts during sports", "Change your height", "Nothing"],
-                    correct: 1
-                },
-                {
-                    question: "Safety devices are important because:",
-                    options: ["They look nice", "They minimize harm from forces", "They cost money", "They are colorful"],
+                    question: "What does a structure's function mean?",
+                    options: ["Its color", "What it's designed to do", "How old it is", "Where it's located"],
                     correct: 1
                 }
             ]
@@ -2326,25 +1103,23 @@
                 event.target.classList.add('active');
             }
             
-            // Hide/show navigation and back button based on page
+            // Hide/show navigation and back button
             const nav = document.querySelector('nav');
             const backButton = document.getElementById('backButton');
             const bottomBackButtons = document.querySelectorAll('.bottom-back-button');
             
             if (pageId === 'home') {
-                // On home page: show nav, hide back buttons
                 nav.classList.remove('hidden');
                 backButton.classList.remove('show');
                 bottomBackButtons.forEach(btn => btn.classList.remove('show'));
             } else {
-                // On lesson page: hide nav, show back buttons
                 nav.classList.add('hidden');
                 backButton.classList.add('show');
                 bottomBackButtons.forEach(btn => btn.classList.add('show'));
             }
             
             // Load quiz if not already loaded
-            if (pageId !== 'home' && !document.getElementById(`${pageId}-quiz`).innerHTML) {
+            if (pageId !== 'home' && quizData[pageId] && !document.getElementById(`${pageId}-quiz`).innerHTML) {
                 loadQuiz(pageId);
             }
             
@@ -2354,6 +1129,8 @@
         // Load Quiz
         function loadQuiz(section) {
             const quizContainer = document.getElementById(`${section}-quiz`);
+            if (!quizContainer || !quizData[section]) return;
+            
             const questions = quizData[section];
             
             let html = '';
@@ -2388,6 +1165,8 @@
 
         // Check Quiz
         function checkQuiz(section) {
+            if (!quizData[section]) return;
+            
             const questions = quizData[section];
             let correct = 0;
             
@@ -2405,13 +1184,13 @@
                     if (selectedIndex === q.correct) {
                         selected.classList.add('correct');
                         feedback.className = 'feedback correct show';
-                        feedback.textContent = '✓ Correct! Awesome!';
+                        feedback.textContent = '✓ Correct! Great job!';
                         correct++;
                     } else {
                         selected.classList.add('incorrect');
                         question.querySelectorAll('.option')[q.correct].classList.add('correct');
                         feedback.className = 'feedback incorrect show';
-                        feedback.textContent = '✗ Not quite. The correct answer is highlighted in green.';
+                        feedback.textContent = '✗ Not quite. The correct answer is shown in green.';
                     }
                 }
             });
@@ -2420,14 +1199,14 @@
             scoreDisplay.style.display = 'block';
             scoreDisplay.innerHTML = `
                 <h3>Your Score: ${correct} / ${questions.length}</h3>
-                <p>${correct === questions.length ? '🎉 Perfect! You\'re a force expert!' : 
-                     correct >= questions.length * 0.8 ? '⚡ Excellent work!' :
-                     correct >= questions.length * 0.6 ? '💪 Good job! Keep learning!' :
-                     '📚 Keep practicing! Review the lesson and try again!'}</p>
+                <p>${correct === questions.length ? '🎉 Perfect score!' : 
+                     correct >= questions.length * 0.8 ? '⭐ Great work!' :
+                     correct >= questions.length * 0.6 ? '😊 Good effort!' :
+                     '📚 Keep trying!'}</p>
             `;
         }
 
-        // C2.1 Activity - Drag and Drop
+        // Drag and Drop Setup
         let draggedElement = null;
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -2478,8 +1257,9 @@
             }
         }
 
-        function checkC21Activity() {
-            const dropZones = document.querySelectorAll('#c21 .drop-zone');
+        // D2.1 Drag-Drop Functions
+        function checkD21DragDrop() {
+            const dropZones = document.querySelectorAll('#d21 .drop-zone');
             let correct = 0;
             let total = 0;
             
@@ -2491,724 +1271,71 @@
                     total++;
                     if (item.dataset.category === category) {
                         correct++;
-                        item.style.borderColor = '#10B981';
+                        item.style.borderColor = '#6BCF7F';
                     } else {
-                        item.style.borderColor = '#EF4444';
+                        item.style.borderColor = '#EF476F';
                     }
                 });
             });
             
-            const feedback = document.getElementById('c21-feedback');
+            const feedback = document.getElementById('d21-drag-feedback');
             feedback.className = 'feedback show';
             
             if (correct === total && total > 0) {
                 feedback.className = 'feedback correct show';
-                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
+                feedback.textContent = `🏗️ Perfect! You got all ${total} correct!`;
             } else {
                 feedback.className = 'feedback incorrect show';
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green is right, red needs to move!`;
             }
         }
 
-        function resetC21Activity() {
-            const items = document.querySelectorAll('#c21 .drag-item');
-            const container = document.getElementById('c21-items');
+        function resetD21DragDrop() {
+            const items = document.querySelectorAll('#d21-drag-items .drag-item');
+            const container = document.getElementById('d21-drag-items');
             
             items.forEach(item => {
-                item.style.borderColor = '#7C3AED';
+                item.style.borderColor = '#9D4EDD';
                 container.appendChild(item);
             });
             
-            document.getElementById('c21-feedback').className = 'feedback';
+            document.getElementById('d21-drag-feedback').className = 'feedback';
         }
 
-        // Picture Matching Activity
-        const c21PictureAnswers = {
-            'c21-pic1': 'contact',
-            'c21-pic2': 'gravity',
-            'c21-pic3': 'magnetic',
-            'c21-pic4': 'friction',
-            'c21-pic5': 'static'
+        // D2.1 Fill-in-Blanks
+        const d21BlankAnswers = {
+            'd21-blank1': ['framework', 'Framework'],
+            'd21-blank2': ['size', 'Size'],
+            'd21-blank3': ['natural', 'Natural'],
+            'd21-blank4': ['built', 'Built', 'human-made', 'Human-made'],
+            'd21-blank5': ['function', 'Function', 'purpose', 'Purpose'],
+            'd21-blank6': ['shape', 'Shape'],
+            'd21-blank7': ['load', 'Load', 'weight', 'Weight'],
+            'd21-blank8': ['supports', 'Supports', 'holds', 'Holds'],
+            'd21-blank9': ['connect', 'Connect', 'link', 'Link', 'join', 'Join'],
+            'd21-blank10': ['supporting', 'Supporting', 'strong', 'Strong', 'sturdy', 'Sturdy']
         };
 
-        function checkC21PictureMatch() {
-            let correct = 0;
-            const total = 5;
-            
-            Object.keys(c21PictureAnswers).forEach(qId => {
-                const allOptions = document.querySelectorAll(`[onclick*="${qId}"]`);
-                
-                allOptions.forEach(opt => {
-                    if (opt.classList.contains('selected')) {
-                        if (opt.dataset.answer === c21PictureAnswers[qId]) {
-                            opt.classList.add('correct');
-                            opt.classList.remove('incorrect');
-                            correct++;
-                        } else {
-                            opt.classList.add('incorrect');
-                            opt.classList.remove('correct');
-                        }
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c21-picture-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            feedback.textContent = correct === total ? 
-                `🌟 Excellent! All ${total} pictures matched correctly!` : 
-                `You got ${correct} out of ${total} correct. Review the incorrect ones!`;
-        }
-
-        // Fill in the Blanks Activity
-        function checkC21FillBlanks() {
+        function checkD21FillBlanks() {
             let correct = 0;
             const total = 10;
             
-            Object.keys(c21BlankAnswers).forEach(blankId => {
+            Object.keys(d21BlankAnswers).forEach(blankId => {
                 const input = document.getElementById(blankId);
                 const userAnswer = input.value.trim();
-                const correctAnswers = c21BlankAnswers[blankId];
+                const correctAnswers = d21BlankAnswers[blankId];
                 
                 if (correctAnswers.includes(userAnswer)) {
-                    input.style.borderColor = '#10B981';
+                    input.style.borderColor = '#6BCF7F';
                     input.style.backgroundColor = '#D1FAE5';
                     correct++;
                 } else {
-                    input.style.borderColor = '#EF4444';
+                    input.style.borderColor = '#EF476F';
                     input.style.backgroundColor = '#FEE2E2';
                 }
             });
             
-            const feedback = document.getElementById('c21-fillblank-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            
-            if (correct === total) {
-                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
-            } else {
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing! Hint: Check spelling and capitalization.`;
-            }
-        }
-
-        // C2.2 Activity
-        const c22Answers = {
-            'c22-q1': 'tool',
-            'c22-q2': 'magnetic',
-            'c22-q3': 'air'
-        };
-
-        function selectOption(element, questionId, answer) {
-            const options = element.parentElement.querySelectorAll('.option');
-            options.forEach(opt => opt.classList.remove('selected'));
-            element.classList.add('selected');
-            element.dataset.answer = answer;
-        }
-
-        function checkC22Activity() {
-            let correct = 0;
-            const total = 3;
-            
-            Object.keys(c22Answers).forEach(qId => {
-                const allOptions = document.querySelectorAll(`[onclick*="${qId}"]`);
-                
-                allOptions.forEach(opt => {
-                    if (opt.classList.contains('selected')) {
-                        if (opt.dataset.answer === c22Answers[qId]) {
-                            opt.classList.add('correct');
-                            opt.classList.remove('incorrect');
-                            correct++;
-                        } else {
-                            opt.classList.add('incorrect');
-                            opt.classList.remove('correct');
-                        }
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c22-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            feedback.textContent = correct === total ? 
-                `⚡ Perfect! All ${total} matches are correct!` : 
-                `You got ${correct} out of ${total} correct. Try the incorrect ones again!`;
-        }
-
-        // C2.3 Activity - Force Effects
-        function applyC23Force(action) {
-            const ball = document.getElementById('c23-ball');
-            const message = document.getElementById('c23-message');
-            
-            ball.style.transition = 'all 0.5s';
-            
-            if (action === 'start') {
-                ball.style.left = '80%';
-                message.textContent = '▶️ Force made the ball START MOVING!';
-            } else if (action === 'stop') {
-                ball.style.left = '50%';
-                ball.style.transition = 'all 0.2s';
-                message.textContent = '⏹️ Force made the ball STOP!';
-            } else if (action === 'direction') {
-                ball.style.top = '20%';
-                ball.style.left = '30%';
-                message.textContent = '↩️ Force CHANGED the ball\'s DIRECTION!';
-            } else if (action === 'shape') {
-                ball.style.borderRadius = '20%';
-                ball.style.transform = 'translate(-50%, -50%) scaleY(0.7)';
-                message.textContent = '🎈 Force CHANGED the ball\'s SHAPE!';
-            }
-        }
-
-        function resetC23Ball() {
-            const ball = document.getElementById('c23-ball');
-            ball.style.left = '50%';
-            ball.style.top = '50%';
-            ball.style.borderRadius = '50%';
-            ball.style.transform = 'translate(-50%, -50%)';
-            document.getElementById('c23-message').textContent = '';
-        }
-
-        // C2.3 Picture Matching
-        const c23PictureAnswers = {
-            'c23-pic1': 'start',
-            'c23-pic2': 'stop',
-            'c23-pic3': 'direction',
-            'c23-pic4': 'speed',
-            'c23-pic5': 'shape'
-        };
-
-        function checkC23PictureMatch() {
-            let correct = 0;
-            const total = 5;
-            
-            Object.keys(c23PictureAnswers).forEach(qId => {
-                const allOptions = document.querySelectorAll(`[onclick*="${qId}"]`);
-                
-                allOptions.forEach(opt => {
-                    if (opt.classList.contains('selected')) {
-                        if (opt.dataset.answer === c23PictureAnswers[qId]) {
-                            opt.classList.add('correct');
-                            opt.classList.remove('incorrect');
-                            correct++;
-                        } else {
-                            opt.classList.add('incorrect');
-                            opt.classList.remove('correct');
-                        }
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c23-picture-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            feedback.textContent = correct === total ? 
-                `🎯 Excellent! Perfect understanding of force effects!` : 
-                `You got ${correct} out of ${total} correct. Review the effects of forces!`;
-        }
-
-        // C2.3 Fill in the Blanks
-        function checkC23FillBlanks() {
-            let correct = 0;
-            const total = 10;
-            
-            Object.keys(c23BlankAnswers).forEach(blankId => {
-                const input = document.getElementById(blankId);
-                const userAnswer = input.value.trim();
-                const correctAnswers = c23BlankAnswers[blankId];
-                
-                if (correctAnswers.includes(userAnswer)) {
-                    input.style.borderColor = '#10B981';
-                    input.style.backgroundColor = '#D1FAE5';
-                    correct++;
-                } else {
-                    input.style.borderColor = '#EF4444';
-                    input.style.backgroundColor = '#FEE2E2';
-                }
-            });
-            
-            const feedback = document.getElementById('c23-fillblank-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            
-            if (correct === total) {
-                feedback.textContent = `⚡ Perfect! You understand force effects!`;
-            } else {
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
-            }
-        }
-
-        // C2.4 Activity
-        const c24Answers = {
-            'c24-q1': 'gravity',
-            'c24-q2': 'friction',
-            'c24-q3': 'wind'
-        };
-
-        function checkC24Activity() {
-            let correct = 0;
-            const total = 3;
-            
-            Object.keys(c24Answers).forEach(qId => {
-                const allOptions = document.querySelectorAll(`[onclick*="${qId}"]`);
-                
-                allOptions.forEach(opt => {
-                    if (opt.classList.contains('selected')) {
-                        if (opt.dataset.answer === c24Answers[qId]) {
-                            opt.classList.add('correct');
-                            opt.classList.remove('incorrect');
-                            correct++;
-                        } else {
-                            opt.classList.add('incorrect');
-                            opt.classList.remove('correct');
-                        }
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c24-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            feedback.textContent = correct === total ? 
-                `⚡ Perfect! You understand forces in daily life!` : 
-                `You got ${correct} out of ${total} correct. Think about what forces are involved!`;
-        }
-
-        // C1.1 Activity
-        const c11Answers = {
-            'c11-q1': 'trees',
-            'c11-q2': 'barriers',
-            'c11-q3': 'turbines'
-        };
-
-        function checkC11Activity() {
-            let correct = 0;
-            const total = 3;
-            
-            Object.keys(c11Answers).forEach(qId => {
-                const allOptions = document.querySelectorAll(`[onclick*="${qId}"]`);
-                
-                allOptions.forEach(opt => {
-                    if (opt.classList.contains('selected')) {
-                        if (opt.dataset.answer === c11Answers[qId]) {
-                            opt.classList.add('correct');
-                            opt.classList.remove('incorrect');
-                            correct++;
-                        } else {
-                            opt.classList.add('incorrect');
-                            opt.classList.remove('correct');
-                        }
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c11-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            feedback.textContent = correct === total ? 
-                `⚡ Excellent! You know how to work with natural forces!` : 
-                `You got ${correct} out of ${total} correct. Think about what helps us!`;
-        }
-
-        // C1.2 Activity
-        const c12Answers = {
-            'c12-q1': 'helmet',
-            'c12-q2': 'seatbelt',
-            'c12-q3': 'life',
-            'c12-q4': 'pads'
-        };
-
-        function checkC12Activity() {
-            let correct = 0;
-            const total = 4;
-            
-            Object.keys(c12Answers).forEach(qId => {
-                const allOptions = document.querySelectorAll(`[onclick*="${qId}"]`);
-                
-                allOptions.forEach(opt => {
-                    if (opt.classList.contains('selected')) {
-                        if (opt.dataset.answer === c12Answers[qId]) {
-                            opt.classList.add('correct');
-                            opt.classList.remove('incorrect');
-                            correct++;
-                        } else {
-                            opt.classList.add('incorrect');
-                            opt.classList.remove('correct');
-                        }
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c12-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            feedback.textContent = correct === total ? 
-                `🛡️ Perfect! You know how to stay safe!` : 
-                `You got ${correct} out of ${total} correct. Think about what protects you best!`;
-        }
-
-        // C2.1 - Update fill-in-blank answers to include 10 questions
-        const c21BlankAnswers = {
-            'c21-blank1': ['contact', 'Contact'],
-            'c21-blank2': ['gravity', 'Gravity'],
-            'c21-blank3': ['static electricity', 'Static Electricity', 'static', 'Static'],
-            'c21-blank4': ['friction', 'Friction'],
-            'c21-blank5': ['magnetism', 'Magnetism', 'magnetic force', 'Magnetic Force'],
-            'c21-blank6': ['friction', 'Friction'],
-            'c21-blank7': ['contact', 'Contact'],
-            'c21-blank8': ['static electricity', 'Static Electricity', 'static', 'Static'],
-            'c21-blank9': ['magnetism', 'Magnetism', 'magnetic force', 'Magnetic Force'],
-            'c21-blank10': ['gravity', 'Gravity']
-        };
-
-        // C2.2 Drag-Drop Functions
-        function checkC22DragDrop() {
-            const dropZones = document.querySelectorAll('#c22 .drop-zone');
-            let correct = 0;
-            let total = 0;
-            
-            dropZones.forEach(zone => {
-                const category = zone.dataset.category;
-                const items = zone.querySelectorAll('.drag-item');
-                
-                items.forEach(item => {
-                    total++;
-                    if (item.dataset.category === category) {
-                        correct++;
-                        item.style.borderColor = '#10B981';
-                    } else {
-                        item.style.borderColor = '#EF4444';
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c22-drag-feedback');
-            feedback.className = 'feedback show';
-            
-            if (correct === total && total > 0) {
-                feedback.className = 'feedback correct show';
-                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
-            } else {
-                feedback.className = 'feedback incorrect show';
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
-            }
-        }
-
-        function resetC22DragDrop() {
-            const items = document.querySelectorAll('#c22-drag-items .drag-item');
-            const container = document.getElementById('c22-drag-items');
-            
-            items.forEach(item => {
-                item.style.borderColor = '#7C3AED';
-                container.appendChild(item);
-            });
-            
-            document.getElementById('c22-drag-feedback').className = 'feedback';
-        }
-
-        // C2.2 Fill-in-Blanks
-        const c22BlankAnswers = {
-            'c22-blank1': ['tool', 'Tool'],
-            'c22-blank2': ['direct contact', 'Direct Contact', 'Direct contact'],
-            'c22-blank3': ['air pressure', 'Air Pressure', 'Air pressure'],
-            'c22-blank4': ['magnet', 'Magnet'],
-            'c22-blank5': ['machines', 'Machines'],
-            'c22-blank6': ['tool', 'Tool'],
-            'c22-blank7': ['touching', 'Touching'],
-            'c22-blank8': ['force', 'Force', 'pressure', 'Pressure'],
-            'c22-blank9': ['water pressure', 'Water Pressure', 'Water pressure'],
-            'c22-blank10': ['tool', 'Tool', 'lever', 'Lever']
-        };
-
-        function checkC22FillBlanks() {
-            let correct = 0;
-            const total = 10;
-            
-            Object.keys(c22BlankAnswers).forEach(blankId => {
-                const input = document.getElementById(blankId);
-                const userAnswer = input.value.trim();
-                const correctAnswers = c22BlankAnswers[blankId];
-                
-                if (correctAnswers.includes(userAnswer)) {
-                    input.style.borderColor = '#10B981';
-                    input.style.backgroundColor = '#D1FAE5';
-                    correct++;
-                } else {
-                    input.style.borderColor = '#EF4444';
-                    input.style.backgroundColor = '#FEE2E2';
-                }
-            });
-            
-            const feedback = document.getElementById('c22-fillblank-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            
-            if (correct === total) {
-                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
-            } else {
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
-            }
-        }
-
-        // C2.3 - Update fill-in-blank answers to include 10 questions  
-        const c23BlankAnswers = {
-            'c23-blank1': ['magnitude', 'Magnitude', 'strength', 'Strength'],
-            'c23-blank2': ['stop', 'Stop'],
-            'c23-blank3': ['bigger', 'Bigger', 'greater', 'Greater', 'larger', 'Larger'],
-            'c23-blank4': ['shape', 'Shape'],
-            'c23-blank5': ['speed', 'Speed', 'direction', 'Direction', 'motion', 'Motion'],
-            'c23-blank6': ['direction', 'Direction'],
-            'c23-blank7': ['bigger', 'Bigger', 'greater', 'Greater', 'stronger', 'Stronger'],
-            'c23-blank8': ['stop', 'Stop'],
-            'c23-blank9': ['shape', 'Shape'],
-            'c23-blank10': ['magnitude', 'Magnitude', 'magnitudes', 'Magnitudes', 'strength', 'Strength', 'size', 'Size']
-        };
-
-        // C2.4 Drag-Drop Functions
-        function checkC24DragDrop() {
-            const dropZones = document.querySelectorAll('#c24 .drop-zone');
-            let correct = 0;
-            let total = 0;
-            
-            dropZones.forEach(zone => {
-                const category = zone.dataset.category;
-                const items = zone.querySelectorAll('.drag-item');
-                
-                items.forEach(item => {
-                    total++;
-                    if (item.dataset.category === category) {
-                        correct++;
-                        item.style.borderColor = '#10B981';
-                    } else {
-                        item.style.borderColor = '#EF4444';
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c24-drag-feedback');
-            feedback.className = 'feedback show';
-            
-            if (correct === total && total > 0) {
-                feedback.className = 'feedback correct show';
-                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
-            } else {
-                feedback.className = 'feedback incorrect show';
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
-            }
-        }
-
-        function resetC24DragDrop() {
-            const items = document.querySelectorAll('#c24-drag-items .drag-item');
-            const container = document.getElementById('c24-drag-items');
-            
-            items.forEach(item => {
-                item.style.borderColor = '#7C3AED';
-                container.appendChild(item);
-            });
-            
-            document.getElementById('c24-drag-feedback').className = 'feedback';
-        }
-
-        // C2.4 Fill-in-Blanks
-        const c24BlankAnswers = {
-            'c24-blank1': ['friction', 'Friction'],
-            'c24-blank2': ['gravity', 'Gravity'],
-            'c24-blank3': ['push', 'Push'],
-            'c24-blank4': ['push', 'Push', 'pushing', 'Pushing'],
-            'c24-blank5': ['pull', 'Pull'],
-            'c24-blank6': ['push', 'Push'],
-            'c24-blank7': ['friction', 'Friction'],
-            'c24-blank8': ['gravity', 'Gravity'],
-            'c24-blank9': ['throwing', 'Throwing', 'pushing', 'Pushing'],
-            'c24-blank10': ['forces', 'Forces', 'force', 'Force']
-        };
-
-        function checkC24FillBlanks() {
-            let correct = 0;
-            const total = 10;
-            
-            Object.keys(c24BlankAnswers).forEach(blankId => {
-                const input = document.getElementById(blankId);
-                const userAnswer = input.value.trim();
-                const correctAnswers = c24BlankAnswers[blankId];
-                
-                if (correctAnswers.includes(userAnswer)) {
-                    input.style.borderColor = '#10B981';
-                    input.style.backgroundColor = '#D1FAE5';
-                    correct++;
-                } else {
-                    input.style.borderColor = '#EF4444';
-                    input.style.backgroundColor = '#FEE2E2';
-                }
-            });
-            
-            const feedback = document.getElementById('c24-fillblank-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            
-            if (correct === total) {
-                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
-            } else {
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
-            }
-        }
-
-        // C1.1 Drag-Drop Functions
-        function checkC11DragDrop() {
-            const dropZones = document.querySelectorAll('#c11 .drop-zone');
-            let correct = 0;
-            let total = 0;
-            
-            dropZones.forEach(zone => {
-                const category = zone.dataset.category;
-                const items = zone.querySelectorAll('.drag-item');
-                
-                items.forEach(item => {
-                    total++;
-                    if (item.dataset.category === category) {
-                        correct++;
-                        item.style.borderColor = '#10B981';
-                    } else {
-                        item.style.borderColor = '#EF4444';
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c11-drag-feedback');
-            feedback.className = 'feedback show';
-            
-            if (correct === total && total > 0) {
-                feedback.className = 'feedback correct show';
-                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
-            } else {
-                feedback.className = 'feedback incorrect show';
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
-            }
-        }
-
-        function resetC11DragDrop() {
-            const items = document.querySelectorAll('#c11-drag-items .drag-item');
-            const container = document.getElementById('c11-drag-items');
-            
-            items.forEach(item => {
-                item.style.borderColor = '#7C3AED';
-                container.appendChild(item);
-            });
-            
-            document.getElementById('c11-drag-feedback').className = 'feedback';
-        }
-
-        // C1.1 Fill-in-Blanks
-        const c11BlankAnswers = {
-            'c11-blank1': ['wind', 'Wind'],
-            'c11-blank2': ['water', 'Water'],
-            'c11-blank3': ['earthquakes', 'Earthquakes'],
-            'c11-blank4': ['wind', 'Wind'],
-            'c11-blank5': ['hydroelectric', 'Hydroelectric'],
-            'c11-blank6': ['trees', 'Trees'],
-            'c11-blank7': ['warning', 'Warning'],
-            'c11-blank8': ['structures', 'Structures', 'buildings', 'Buildings'],
-            'c11-blank9': ['solar', 'Solar'],
-            'c11-blank10': ['barriers', 'Barriers', 'walls', 'Walls']
-        };
-
-        function checkC11FillBlanks() {
-            let correct = 0;
-            const total = 10;
-            
-            Object.keys(c11BlankAnswers).forEach(blankId => {
-                const input = document.getElementById(blankId);
-                const userAnswer = input.value.trim();
-                const correctAnswers = c11BlankAnswers[blankId];
-                
-                if (correctAnswers.includes(userAnswer)) {
-                    input.style.borderColor = '#10B981';
-                    input.style.backgroundColor = '#D1FAE5';
-                    correct++;
-                } else {
-                    input.style.borderColor = '#EF4444';
-                    input.style.backgroundColor = '#FEE2E2';
-                }
-            });
-            
-            const feedback = document.getElementById('c11-fillblank-feedback');
-            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
-            
-            if (correct === total) {
-                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
-            } else {
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
-            }
-        }
-
-        // C1.2 Drag-Drop Functions
-        function checkC12DragDrop() {
-            const dropZones = document.querySelectorAll('#c12 .drop-zone');
-            let correct = 0;
-            let total = 0;
-            
-            dropZones.forEach(zone => {
-                const category = zone.dataset.category;
-                const items = zone.querySelectorAll('.drag-item');
-                
-                items.forEach(item => {
-                    total++;
-                    if (item.dataset.category === category) {
-                        correct++;
-                        item.style.borderColor = '#10B981';
-                    } else {
-                        item.style.borderColor = '#EF4444';
-                    }
-                });
-            });
-            
-            const feedback = document.getElementById('c12-drag-feedback');
-            feedback.className = 'feedback show';
-            
-            if (correct === total && total > 0) {
-                feedback.className = 'feedback correct show';
-                feedback.textContent = `⚡ Perfect! You got all ${total} correct!`;
-            } else {
-                feedback.className = 'feedback incorrect show';
-                feedback.textContent = `You got ${correct} out of ${total} correct. Green borders are correct, red need to be moved!`;
-            }
-        }
-
-        function resetC12DragDrop() {
-            const items = document.querySelectorAll('#c12-drag-items .drag-item');
-            const container = document.getElementById('c12-drag-items');
-            
-            items.forEach(item => {
-                item.style.borderColor = '#7C3AED';
-                container.appendChild(item);
-            });
-            
-            document.getElementById('c12-drag-feedback').className = 'feedback';
-        }
-
-        // C1.2 Fill-in-Blanks
-        const c12BlankAnswers = {
-            'c12-blank1': ['helmet', 'Helmet'],
-            'c12-blank2': ['seatbelts', 'Seatbelts', 'seatbelt', 'Seatbelt'],
-            'c12-blank3': ['jackets', 'Jackets', 'jacket', 'Jacket'],
-            'c12-blank4': ['airbags', 'Airbags', 'pads', 'Pads', 'padding', 'Padding'],
-            'c12-blank5': ['goggles', 'Goggles', 'glasses', 'Glasses'],
-            'c12-blank6': ['equipment', 'Equipment', 'gear', 'Gear'],
-            'c12-blank7': ['airbags', 'Airbags'],
-            'c12-blank8': ['pads', 'Pads', 'padding', 'Padding'],
-            'c12-blank9': ['safety', 'Safety', 'protective', 'Protective'],
-            'c12-blank10': ['helmets', 'Helmets', 'hard hats', 'Hard Hats', 'Hard hats']
-        };
-
-        function checkC12FillBlanks() {
-            let correct = 0;
-            const total = 10;
-            
-            Object.keys(c12BlankAnswers).forEach(blankId => {
-                const input = document.getElementById(blankId);
-                const userAnswer = input.value.trim();
-                const correctAnswers = c12BlankAnswers[blankId];
-                
-                if (correctAnswers.includes(userAnswer)) {
-                    input.style.borderColor = '#10B981';
-                    input.style.backgroundColor = '#D1FAE5';
-                    correct++;
-                } else {
-                    input.style.borderColor = '#EF4444';
-                    input.style.backgroundColor = '#FEE2E2';
-                }
-            });
-            
-            const feedback = document.getElementById('c12-fillblank-feedback');
+            const feedback = document.getElementById('d21-fillblank-feedback');
             feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
             
             if (correct === total) {
