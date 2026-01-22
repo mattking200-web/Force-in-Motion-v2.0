@@ -947,13 +947,170 @@
             </div>
         </div>
 
-        <!-- D1.1 PAGE - TEMPLATE (Copy D2.1 pattern and modify content) -->
+        <!-- D1.1 PAGE - COMPLETE -->
         <div id="d11" class="page">
             <div class="card" style="border-color: var(--pink);">
                 <h2>D1.1 - Effects on Society & Environment 🌍</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern above!</p>
-                <p>Include: Educational content, Drag-Drop activity, 10 Fill-in-Blanks, Quiz</p>
-                
+                <p>Structures affect both our society and the environment in many ways - some positive and some negative!</p>
+
+                <h3>Positive Effects on Society 👍</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🏠</div>
+                        <h4>Homes</h4>
+                        <p>Provide shelter and safety!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">🏥</div>
+                        <h4>Hospitals</h4>
+                        <p>Help keep people healthy!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">🏫</div>
+                        <h4>Schools</h4>
+                        <p>Places to learn and grow!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">🌉</div>
+                        <h4>Bridges</h4>
+                        <p>Connect communities!</p>
+                    </div>
+                </div>
+
+                <h3>Effects on Environment 🌿</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">🌳</div>
+                        <h4>Habitat Loss</h4>
+                        <p>Clearing forests for buildings</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">💨</div>
+                        <h4>Air Pollution</h4>
+                        <p>Factories and construction</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">🌊</div>
+                        <h4>Water Impact</h4>
+                        <p>Runoff affects rivers and lakes</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">♻️</div>
+                        <h4>Sustainable Building</h4>
+                        <p>Building responsibly helps!</p>
+                    </div>
+                </div>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop - Positive vs Negative Effects!</h3>
+                    <p>Drag each effect to the correct category!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d11-drag-items">
+                        <div class="drag-item" draggable="true" data-category="positive">🏠 Homes for shelter</div>
+                        <div class="drag-item" draggable="true" data-category="negative">🌳 Forest cleared</div>
+                        <div class="drag-item" draggable="true" data-category="positive">🏥 Hospitals for health</div>
+                        <div class="drag-item" draggable="true" data-category="negative">💨 Air pollution</div>
+                        <div class="drag-item" draggable="true" data-category="positive">🌉 Bridges connect places</div>
+                        <div class="drag-item" draggable="true" data-category="negative">🐦 Habitats destroyed</div>
+                        <div class="drag-item" draggable="true" data-category="positive">🏫 Schools for learning</div>
+                        <div class="drag-item" draggable="true" data-category="negative">🌊 Water pollution</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">👍 POSITIVE Effects</h4>
+                            <div class="drop-zone" data-category="positive"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">👎 NEGATIVE Effects</h4>
+                            <div class="drop-zone" data-category="negative"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD11DragDrop()">Check My Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD11DragDrop()">Reset</button>
+                    </div>
+                    <div id="d11-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about effects of structures!</p>
+                    
+                    <div id="d11-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. Structures like homes and schools <input type="text" id="d11-blank1" style="width: 200px;"> our quality of life.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Building structures can sometimes <input type="text" id="d11-blank2" style="width: 150px;"> the natural environment.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. <input type="text" id="d11-blank3" style="width: 150px;"> help people travel across rivers and valleys.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Clearing forests for buildings destroys animal <input type="text" id="d11-blank4" style="width: 200px;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. We must consider <input type="text" id="d11-blank5" style="width: 220px;"> impacts when building.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Structures provide <input type="text" id="d11-blank6" style="width: 150px;"> and safety for people.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. <input type="text" id="d11-blank7" style="width: 200px;"> can cause pollution in air and water.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Hospitals are structures that help keep people <input type="text" id="d11-blank8" style="width: 150px;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. We can reduce harm by building <input type="text" id="d11-blank9" style="width: 200px;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Modern structures use <input type="text" id="d11-blank10" style="width: 200px;"> to be more eco-friendly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD11FillBlanks()">Check My Answers!</button>
+                    <div id="d11-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d11-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d11')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d11-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -962,12 +1119,170 @@
             </div>
         </div>
 
-        <!-- D1.2 PAGE - TEMPLATE -->
+        <!-- D1.2 PAGE - COMPLETE -->
         <div id="d12" class="page">
             <div class="card" style="border-color: var(--yellow);">
                 <h2>D1.2 - Environmental Impact 🦫</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Animals and humans both build structures, but they impact the environment differently!</p>
+
+                <h3>Animal Structures 🐾</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🦫</div>
+                        <h4>Beaver Dams</h4>
+                        <p>Built from sticks and mud!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">🐝</div>
+                        <h4>Beehives</h4>
+                        <p>Hexagonal wax cells!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🐦</div>
+                        <h4>Bird Nests</h4>
+                        <p>Twigs, grass, and leaves!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">🐜</div>
+                        <h4>Anthills</h4>
+                        <p>Underground tunnels!</p>
+                    </div>
+                </div>
+
+                <h3>Key Differences 🔍</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--teal);">
+                        <div class="icon">🌿</div>
+                        <h4>Natural Materials</h4>
+                        <p>Animals use what nature provides!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--orange);">
+                        <div class="icon">📏</div>
+                        <h4>Size Matters</h4>
+                        <p>Human structures are usually bigger!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--red);">
+                        <div class="icon">♻️</div>
+                        <h4>Minimal Impact</h4>
+                        <p>Animal structures blend with nature!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--yellow);">
+                        <div class="icon">🌍</div>
+                        <h4>Learn from Nature</h4>
+                        <p>We can build more sustainably!</p>
+                    </div>
+                </div>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop - Animal vs Human Structures!</h3>
+                    <p>Sort each structure by who builds it!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d12-drag-items">
+                        <div class="drag-item" draggable="true" data-category="animal">🦫 Beaver dam</div>
+                        <div class="drag-item" draggable="true" data-category="human">🏢 Office building</div>
+                        <div class="drag-item" draggable="true" data-category="animal">🐝 Beehive</div>
+                        <div class="drag-item" draggable="true" data-category="human">🏭 Factory</div>
+                        <div class="drag-item" draggable="true" data-category="animal">🐦 Bird nest</div>
+                        <div class="drag-item" draggable="true" data-category="human">🛣️ Highway</div>
+                        <div class="drag-item" draggable="true" data-category="animal">🐜 Anthill</div>
+                        <div class="drag-item" draggable="true" data-category="human">🏗️ Skyscraper</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">🐾 ANIMAL Structures</h4>
+                            <div class="drop-zone" data-category="animal"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--blue); font-size: 1.5rem;">👷 HUMAN Structures</h4>
+                            <div class="drop-zone" data-category="human"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD12DragDrop()">Check My Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD12DragDrop()">Reset</button>
+                    </div>
+                    <div id="d12-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    <p>Complete the sentences about animal and human structures!</p>
+                    
+                    <div id="d12-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. <input type="text" id="d12-blank1" style="width: 150px;"> build dams using sticks and mud.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Bird <input type="text" id="d12-blank2" style="width: 150px;"> are structures made from twigs and grass.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. <input type="text" id="d12-blank3" style="width: 150px;"> are structures where bees live and make honey.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Animals build structures using <input type="text" id="d12-blank4" style="width: 200px;"> materials.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. An <input type="text" id="d12-blank5" style="width: 150px;"> is a structure built by colonies of ants.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Human structures are usually <input type="text" id="d12-blank6" style="width: 150px;"> than animal structures.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Animals build structures that blend with their <input type="text" id="d12-blank7" style="width: 200px;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. <input type="text" id="d12-blank8" style="width: 150px;"> create web structures to catch food.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. We can learn to build more sustainably by studying <input type="text" id="d12-blank9" style="width: 150px;">.
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Animal structures have <input type="text" id="d12-blank10" style="width: 180px;"> environmental impact.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD12FillBlanks()">Check My Answers!</button>
+                    <div id="d12-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d12-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d12')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d12-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -976,12 +1291,160 @@
             </div>
         </div>
 
-        <!-- D2.2 PAGE - TEMPLATE -->
+        <!-- D2.2 PAGE - COMPLETE -->
         <div id="d22" class="page">
             <div class="card" style="border-color: var(--blue);">
                 <h2>D2.2 - Form & Function 🎨</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Form is the <strong>shape</strong> of a structure. Function is its <strong>purpose or job</strong>. They work together!</p>
+
+                <h3>Form Follows Function! 🔄</h3>
+                <div class="example-grid">
+                    <div class="example-card" style="border-color: var(--green);">
+                        <div class="icon">🌂</div>
+                        <h4>Umbrella</h4>
+                        <p>Round form sheds water!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--blue);">
+                        <div class="icon">✏️</div>
+                        <h4>Pencil</h4>
+                        <p>Long, thin form for writing!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--pink);">
+                        <div class="icon">🏺</div>
+                        <h4>Cup</h4>
+                        <p>Hollow form holds liquids!</p>
+                    </div>
+                    <div class="example-card" style="border-color: var(--purple);">
+                        <div class="icon">🌉</div>
+                        <h4>Bridge</h4>
+                        <p>Arched form spans gaps!</p>
+                    </div>
+                </div>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop - Match Form to Function!</h3>
+                    <p>Match each structure to its function!</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d22-drag-items">
+                        <div class="drag-item" draggable="true" data-category="shelter">🏠 House</div>
+                        <div class="drag-item" draggable="true" data-category="connect">🌉 Bridge</div>
+                        <div class="drag-item" draggable="true" data-category="sit">🪑 Chair</div>
+                        <div class="drag-item" draggable="true" data-category="hold">🏺 Cup</div>
+                        <div class="drag-item" draggable="true" data-category="write">✏️ Pencil</div>
+                        <div class="drag-item" draggable="true" data-category="entry">🚪 Door</div>
+                        <div class="drag-item" draggable="true" data-category="light">🪟 Window</div>
+                        <div class="drag-item" draggable="true" data-category="sleep">🛏️ Bed</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--pink); font-size: 1.3rem;">🏠 Shelter People</h4>
+                            <div class="drop-zone" data-category="shelter"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--blue); font-size: 1.3rem;">🌉 Connect Places</h4>
+                            <div class="drop-zone" data-category="connect"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.3rem;">🪑 Support Sitting</h4>
+                            <div class="drop-zone" data-category="sit"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--orange); font-size: 1.3rem;">🏺 Hold Liquids</h4>
+                            <div class="drop-zone" data-category="hold"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--purple); font-size: 1.3rem;">✏️ Write/Draw</h4>
+                            <div class="drop-zone" data-category="write"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--teal); font-size: 1.3rem;">🚪 Control Entry</h4>
+                            <div class="drop-zone" data-category="entry"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--yellow); font-size: 1.3rem;">🪟 Let in Light</h4>
+                            <div class="drop-zone" data-category="light"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.3rem;">🛏️ Support Sleeping</h4>
+                            <div class="drop-zone" data-category="sleep"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD22DragDrop()">Check My Matches!</button>
+                        <button class="btn btn-reset" onclick="resetD22DragDrop()">Reset</button>
+                    </div>
+                    <div id="d22-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    
+                    <div id="d22-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. <input type="text" id="d22-blank1" style="width: 150px;"> is the shape or appearance of a structure.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. <input type="text" id="d22-blank2" style="width: 180px;"> is the job or purpose of a structure.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. A bridge's function is to <input type="text" id="d22-blank3" style="width: 180px;"> two areas.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. The <input type="text" id="d22-blank4" style="width: 150px;"> of an umbrella is round to shed rain.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Form often follows <input type="text" id="d22-blank5" style="width: 180px;"> in good design.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. A chair's function is to <input type="text" id="d22-blank6" style="width: 180px;"> someone sitting.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. The tall, narrow form of a pencil helps with <input type="text" id="d22-blank7" style="width: 180px;">.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. A cup's form helps it hold <input type="text" id="d22-blank8" style="width: 180px;">.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. <input type="text" id="d22-blank9" style="width: 150px;"> and purpose work together in structures.
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Good design matches form to <input type="text" id="d22-blank10" style="width: 180px;">.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD22FillBlanks()">Check My Answers!</button>
+                    <div id="d22-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d22-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d22')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d22-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -990,12 +1453,112 @@
             </div>
         </div>
 
-        <!-- D2.3 PAGE - TEMPLATE -->
+
+        <!-- D2.3 PAGE - COMPLETE -->
         <div id="d23" class="page">
             <div class="card" style="border-color: var(--purple);">
                 <h2>D2.3 - Strength of Structures 💪</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Strength is the ability to support a load without breaking!</p>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d23-drag-items">
+                        <div class="drag-item" draggable="true" data-category="strong">🔩 Steel beam</div>
+                        <div class="drag-item" draggable="true" data-category="strong">🧱 Brick wall</div>
+                        <div class="drag-item" draggable="true" data-category="strong">🏗️ Triangle support</div>
+                        <div class="drag-item" draggable="true" data-category="strong">🪨 Stone pillar</div>
+                        <div class="drag-item" draggable="true" data-category="weak">📄 Paper</div>
+                        <div class="drag-item" draggable="true" data-category="weak">🧵 Single thread</div>
+                        <div class="drag-item" draggable="true" data-category="weak">🍃 Leaf</div>
+                        <div class="drag-item" draggable="true" data-category="weak">❄️ Ice</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <div class="drop-zone" data-category="strong"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <div class="drop-zone" data-category="weak"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD23DragDrop()">Check Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD23DragDrop()">Reset</button>
+                    </div>
+                    <div id="d23-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    
+                    <div id="d23-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. Fill in: <input type="text" id="d23-blank1" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Fill in: <input type="text" id="d23-blank2" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. Fill in: <input type="text" id="d23-blank3" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Fill in: <input type="text" id="d23-blank4" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Fill in: <input type="text" id="d23-blank5" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Fill in: <input type="text" id="d23-blank6" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Fill in: <input type="text" id="d23-blank7" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Fill in: <input type="text" id="d23-blank8" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Fill in: <input type="text" id="d23-blank9" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Fill in: <input type="text" id="d23-blank10" style="width: 200px;">
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD23FillBlanks()">Check Answers!</button>
+                    <div id="d23-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d23-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d23')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d23-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1004,12 +1567,111 @@
             </div>
         </div>
 
-        <!-- D2.4 PAGE - TEMPLATE -->
+        <!-- D2.4 PAGE - COMPLETE -->
         <div id="d24" class="page">
             <div class="card" style="border-color: var(--orange);">
                 <h2>D2.4 - Stability ⚖️</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Stability means keeping balance and not tipping over!</p>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d24-drag-items">
+                        <div class="drag-item" draggable="true" data-category="stable">🔺 Pyramid</div>
+                        <div class="drag-item" draggable="true" data-category="stable">🏛️ Wide-base building</div>
+                        <div class="drag-item" draggable="true" data-category="stable">⛵ Boat with keel</div>
+                        <div class="drag-item" draggable="true" data-category="stable">🪑 Four-legged chair</div>
+                        <div class="drag-item" draggable="true" data-category="unstable">📐 Tall narrow tower</div>
+                        <div class="drag-item" draggable="true" data-category="unstable">🗼 Tower on small base</div>
+                        <div class="drag-item" draggable="true" data-category="unstable">🎪 Teetering structure</div>
+                        <div class="drag-item" draggable="true" data-category="unstable">📏 Pencil standing up</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <div class="drop-zone" data-category="stable"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <div class="drop-zone" data-category="unstable"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD24DragDrop()">Check Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD24DragDrop()">Reset</button>
+                    </div>
+                    <div id="d24-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    
+                    <div id="d24-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. Fill in: <input type="text" id="d24-blank1" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Fill in: <input type="text" id="d24-blank2" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. Fill in: <input type="text" id="d24-blank3" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Fill in: <input type="text" id="d24-blank4" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Fill in: <input type="text" id="d24-blank5" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Fill in: <input type="text" id="d24-blank6" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Fill in: <input type="text" id="d24-blank7" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Fill in: <input type="text" id="d24-blank8" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Fill in: <input type="text" id="d24-blank9" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Fill in: <input type="text" id="d24-blank10" style="width: 200px;">
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD24FillBlanks()">Check Answers!</button>
+                    <div id="d24-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d24-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d24')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d24-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1018,12 +1680,111 @@
             </div>
         </div>
 
-        <!-- D2.5 PAGE - TEMPLATE -->
+        <!-- D2.5 PAGE - COMPLETE -->
         <div id="d25" class="page">
             <div class="card" style="border-color: var(--teal);">
                 <h2>D2.5 - Material Properties 🧱</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Different materials have different properties - strength, flexibility, weight!</p>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d25-drag-items">
+                        <div class="drag-item" draggable="true" data-category="strong">🔩 Steel</div>
+                        <div class="drag-item" draggable="true" data-category="strong">🪨 Concrete</div>
+                        <div class="drag-item" draggable="true" data-category="flexible">🔧 Rubber</div>
+                        <div class="drag-item" draggable="true" data-category="flexible">🧵 Fabric</div>
+                        <div class="drag-item" draggable="true" data-category="waterproof">🛡️ Plastic</div>
+                        <div class="drag-item" draggable="true" data-category="waterproof">🪟 Glass</div>
+                        <div class="drag-item" draggable="true" data-category="light">🪶 Foam</div>
+                        <div class="drag-item" draggable="true" data-category="light">🎈 Inflatable plastic</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <div class="drop-zone" data-category="strong"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <div class="drop-zone" data-category="waterproof"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD25DragDrop()">Check Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD25DragDrop()">Reset</button>
+                    </div>
+                    <div id="d25-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    
+                    <div id="d25-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. Fill in: <input type="text" id="d25-blank1" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Fill in: <input type="text" id="d25-blank2" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. Fill in: <input type="text" id="d25-blank3" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Fill in: <input type="text" id="d25-blank4" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Fill in: <input type="text" id="d25-blank5" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Fill in: <input type="text" id="d25-blank6" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Fill in: <input type="text" id="d25-blank7" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Fill in: <input type="text" id="d25-blank8" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Fill in: <input type="text" id="d25-blank9" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Fill in: <input type="text" id="d25-blank10" style="width: 200px;">
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD25FillBlanks()">Check Answers!</button>
+                    <div id="d25-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d25-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d25')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d25-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1032,12 +1793,111 @@
             </div>
         </div>
 
-        <!-- D2.6 PAGE - TEMPLATE -->
+        <!-- D2.6 PAGE - COMPLETE -->
         <div id="d26" class="page">
             <div class="card" style="border-color: var(--red);">
                 <h2>D2.6 - Forces on Structures 💨</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Forces like gravity, wind, and earthquakes affect structures!</p>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d26-drag-items">
+                        <div class="drag-item" draggable="true" data-category="push">🏋️ Weight pressing down</div>
+                        <div class="drag-item" draggable="true" data-category="push">🌊 Water pressure</div>
+                        <div class="drag-item" draggable="true" data-category="pull">🪢 Rope being pulled</div>
+                        <div class="drag-item" draggable="true" data-category="pull">🌉 Bridge cables</div>
+                        <div class="drag-item" draggable="true" data-category="twist">🌪️ Tornado</div>
+                        <div class="drag-item" draggable="true" data-category="twist">💨 Strong wind</div>
+                        <div class="drag-item" draggable="true" data-category="natural">⬇️ Gravity</div>
+                        <div class="drag-item" draggable="true" data-category="natural">🏔️ Earthquake</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <div class="drop-zone" data-category="push"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <div class="drop-zone" data-category="twist"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD26DragDrop()">Check Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD26DragDrop()">Reset</button>
+                    </div>
+                    <div id="d26-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    
+                    <div id="d26-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. Fill in: <input type="text" id="d26-blank1" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Fill in: <input type="text" id="d26-blank2" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. Fill in: <input type="text" id="d26-blank3" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Fill in: <input type="text" id="d26-blank4" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Fill in: <input type="text" id="d26-blank5" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Fill in: <input type="text" id="d26-blank6" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Fill in: <input type="text" id="d26-blank7" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Fill in: <input type="text" id="d26-blank8" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Fill in: <input type="text" id="d26-blank9" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Fill in: <input type="text" id="d26-blank10" style="width: 200px;">
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD26FillBlanks()">Check Answers!</button>
+                    <div id="d26-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d26-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d26')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d26-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1046,12 +1906,111 @@
             </div>
         </div>
 
-        <!-- D2.7 PAGE - TEMPLATE -->
+        <!-- D2.7 PAGE - COMPLETE -->
         <div id="d27" class="page">
             <div class="card" style="border-color: var(--pink);">
                 <h2>D2.7 - Struts & Ties 🔗</h2>
-                <p><strong>TEMPLATE:</strong> Add your content here following the D2.1 pattern!</p>
-                
+                <p>Struts resist compression (pushing). Ties resist tension (pulling)!</p>
+
+                <div class="activity-box">
+                    <h3>🎯 Activity 1: Drag & Drop!</h3>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 2rem 0;" id="d27-drag-items">
+                        <div class="drag-item" draggable="true" data-category="strut">🏛️ Columns</div>
+                        <div class="drag-item" draggable="true" data-category="strut">🏗️ Vertical beams</div>
+                        <div class="drag-item" draggable="true" data-category="strut">🪑 Chair legs</div>
+                        <div class="drag-item" draggable="true" data-category="strut">🌉 Bridge towers</div>
+                        <div class="drag-item" draggable="true" data-category="tie">🪢 Bridge cables</div>
+                        <div class="drag-item" draggable="true" data-category="tie">🎪 Tent ropes</div>
+                        <div class="drag-item" draggable="true" data-category="tie">🏗️ Support wires</div>
+                        <div class="drag-item" draggable="true" data-category="tie">⛵ Sail rigging</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="text-align: center; color: var(--green); font-size: 1.5rem;">Category 1</h4>
+                            <div class="drop-zone" data-category="strut"></div>
+                        </div>
+                        <div>
+                            <h4 style="text-align: center; color: var(--red); font-size: 1.5rem;">Category 2</h4>
+                            <div class="drop-zone" data-category="tie"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-check" onclick="checkD27DragDrop()">Check Sorting!</button>
+                        <button class="btn btn-reset" onclick="resetD27DragDrop()">Reset</button>
+                    </div>
+                    <div id="d27-drag-feedback" class="feedback"></div>
+                </div>
+
+                <div class="activity-box" style="background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-color: var(--blue);">
+                    <h3>🎯 Activity 2: Fill in the Blanks!</h3>
+                    
+                    <div id="d27-fill-blank" style="display: grid; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                1. Fill in: <input type="text" id="d27-blank1" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                2. Fill in: <input type="text" id="d27-blank2" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                3. Fill in: <input type="text" id="d27-blank3" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                4. Fill in: <input type="text" id="d27-blank4" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                5. Fill in: <input type="text" id="d27-blank5" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                6. Fill in: <input type="text" id="d27-blank6" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                7. Fill in: <input type="text" id="d27-blank7" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                8. Fill in: <input type="text" id="d27-blank8" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                9. Fill in: <input type="text" id="d27-blank9" style="width: 200px;">
+                            </p>
+                        </div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; border: 3px solid var(--blue);">
+                            <p style="font-weight: 700; font-size: 1.2rem; line-height: 2;">
+                                10. Fill in: <input type="text" id="d27-blank10" style="width: 200px;">
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-check" onclick="checkD27FillBlanks()">Check Answers!</button>
+                    <div id="d27-fillblank-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>📝 Quiz Time!</h3>
+                    <div id="d27-quiz"></div>
+                    <button class="btn btn-check" onclick="checkQuiz('d27')" style="margin-top: 1.5rem;">Submit Quiz</button>
+                    <div id="d27-quiz-score" class="score-display" style="display: none;"></div>
+                </div>
+
                 <div style="text-align: center;">
                     <button class="back-button bottom-back-button" onclick="showPage('home', event)">
                         ← Back to Lessons
@@ -1336,6 +2295,289 @@
             });
             
             const feedback = document.getElementById('d21-fillblank-feedback');
+            feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
+            
+            if (correct === total) {
+                feedback.textContent = `🎉 Perfect! All ${total} blanks filled correctly!`;
+            } else {
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green boxes are right, red boxes need fixing!`;
+            }
+        }
+
+        // Add Quiz Data for all new units
+        quizData.d11 = [
+            { question: "How do structures help society?", options: ["They don't help", "They provide shelter and services", "They only look nice", "They cost money"], correct: 1 },
+            { question: "What is a negative effect of building?", options: ["Creating homes", "Destroying habitats", "Helping people", "Providing jobs"], correct: 1 },
+            { question: "What connects places across water?", options: ["Roads", "Bridges", "Tunnels", "Airplanes"], correct: 1 },
+            { question: "What should we consider when building?", options: ["Only cost", "Environmental impact", "Only speed", "Only size"], correct: 1 },
+            { question: "How can we build responsibly?", options: ["Build anywhere", "Ignore nature", "Use sustainable methods", "Build quickly"], correct: 2 }
+        ];
+
+        quizData.d12 = [
+            { question: "What do beavers use to build dams?", options: ["Metal", "Sticks and mud", "Plastic", "Cement"], correct: 1 },
+            { question: "Which is an animal structure?", options: ["Factory", "Beehive", "Highway", "Office"], correct: 1 },
+            { question: "What materials do animals use?", options: ["Steel", "Plastic", "Natural materials", "Glass"], correct: 2 },
+            { question: "Compared to animal structures, human structures are usually:", options: ["Smaller", "The same size", "Bigger", "Invisible"], correct: 2 },
+            { question: "What can we learn from animal structures?", options: ["Nothing", "How to build sustainably", "How to waste materials", "How to pollute"], correct: 1 }
+        ];
+
+        quizData.d22 = [
+            { question: "What is form?", options: ["The price", "The shape", "The color", "The age"], correct: 1 },
+            { question: "What is function?", options: ["The decoration", "The purpose or job", "The weight", "The size"], correct: 1 },
+            { question: "An umbrella's round form helps it:", options: ["Look pretty", "Shed water", "Float", "Spin"], correct: 1 },
+            { question: "Form follows:", options: ["Color", "Function", "Price", "Time"], correct: 1 },
+            { question: "What's a chair's function?", options: ["Decorate", "Support sitting", "Hold water", "Write"], correct: 1 }
+        ];
+
+        quizData.d23 = [
+            { question: "What is strength?", options: ["How pretty something is", "Ability to support a load", "How fast it moves", "Its color"], correct: 1 },
+            { question: "Which is strongest?", options: ["Paper", "Steel", "Thread", "Leaf"], correct: 1 },
+            { question: "What shape is strongest for support?", options: ["Circle", "Square", "Triangle", "Pentagon"], correct: 2 },
+            { question: "Making material thicker makes it:", options: ["Weaker", "Lighter", "Stronger", "Slower"], correct: 2 },
+            { question: "What helps distribute weight in buildings?", options: ["Paint", "Beams", "Windows", "Doors"], correct: 1 }
+        ];
+
+        quizData.d24 = [
+            { question: "What is stability?", options: ["Speed", "Keeping balance", "Weight", "Color"], correct: 1 },
+            { question: "A wide base makes a structure:", options: ["Weaker", "More stable", "Faster", "Smaller"], correct: 1 },
+            { question: "Which is very stable?", options: ["Tall narrow tower", "Pyramid", "Thin stick", "Pencil"], correct: 1 },
+            { question: "A low center of gravity improves:", options: ["Speed", "Color", "Stability", "Size"], correct: 2 },
+            { question: "How many legs make a chair stable?", options: ["One", "Two", "Three or four", "Ten"], correct: 2 }
+        ];
+
+        quizData.d25 = [
+            { question: "What are properties?", options: ["Prices", "Characteristics", "Colors", "Ages"], correct: 1 },
+            { question: "Which material is very strong?", options: ["Paper", "Thread", "Steel", "Leaf"], correct: 2 },
+            { question: "Which material is flexible?", options: ["Steel", "Stone", "Rubber", "Glass"], correct: 2 },
+            { question: "Plastic is:", options: ["Heavy and breakable", "Light and waterproof", "Weak and expensive", "Hard to find"], correct: 1 },
+            { question: "Engineers choose materials based on their:", options: ["Color", "Properties", "Age", "Location"], correct: 1 }
+        ];
+
+        quizData.d26 = [
+            { question: "What pulls everything downward?", options: ["Wind", "Gravity", "Magnets", "Water"], correct: 1 },
+            { question: "What force can push structures sideways?", options: ["Gravity", "Weight", "Wind", "Color"], correct: 2 },
+            { question: "Compression means:", options: ["Pulling", "Pushing or squeezing", "Bending", "Spinning"], correct: 1 },
+            { question: "Tension means:", options: ["Pushing", "Pulling or stretching", "Twisting", "Painting"], correct: 1 },
+            { question: "Structures must:", options: ["Be colorful", "Withstand forces", "Be expensive", "Be small"], correct: 1 }
+        ];
+
+        quizData.d27 = [
+            { question: "What does a strut resist?", options: ["Tension", "Compression", "Color", "Time"], correct: 1 },
+            { question: "What does a tie resist?", options: ["Compression", "Tension", "Color", "Age"], correct: 1 },
+            { question: "Building columns act as:", options: ["Ties", "Struts", "Windows", "Doors"], correct: 1 },
+            { question: "Bridge cables are examples of:", options: ["Struts", "Ties", "Walls", "Roofs"], correct: 1 },
+            { question: "Struts and ties work:", options: ["Alone", "Against each other", "Together", "Never"], correct: 2 }
+        ];
+
+        // Drag-Drop Functions for D1.1
+        function checkD11DragDrop() { checkGenericDragDrop('d11'); }
+        function resetD11DragDrop() { resetGenericDragDrop('d11'); }
+
+        // Drag-Drop Functions for D1.2
+        function checkD12DragDrop() { checkGenericDragDrop('d12'); }
+        function resetD12DragDrop() { resetGenericDragDrop('d12'); }
+
+        // Drag-Drop Functions for D2.2
+        function checkD22DragDrop() { checkGenericDragDrop('d22'); }
+        function resetD22DragDrop() { resetGenericDragDrop('d22'); }
+
+        // Drag-Drop Functions for D2.3
+        function checkD23DragDrop() { checkGenericDragDrop('d23'); }
+        function resetD23DragDrop() { resetGenericDragDrop('d23'); }
+
+        // Drag-Drop Functions for D2.4
+        function checkD24DragDrop() { checkGenericDragDrop('d24'); }
+        function resetD24DragDrop() { resetGenericDragDrop('d24'); }
+
+        // Drag-Drop Functions for D2.5
+        function checkD25DragDrop() { checkGenericDragDrop('d25'); }
+        function resetD25DragDrop() { resetGenericDragDrop('d25'); }
+
+        // Drag-Drop Functions for D2.6
+        function checkD26DragDrop() { checkGenericDragDrop('d26'); }
+        function resetD26DragDrop() { resetGenericDragDrop('d26'); }
+
+        // Drag-Drop Functions for D2.7
+        function checkD27DragDrop() { checkGenericDragDrop('d27'); }
+        function resetD27DragDrop() { resetGenericDragDrop('d27'); }
+
+        // Generic Drag-Drop Checker
+        function checkGenericDragDrop(unitId) {
+            const dropZones = document.querySelectorAll(`#${unitId} .drop-zone`);
+            let correct = 0, total = 0;
+            
+            dropZones.forEach(zone => {
+                const category = zone.dataset.category;
+                const items = zone.querySelectorAll('.drag-item');
+                items.forEach(item => {
+                    total++;
+                    if (item.dataset.category === category) {
+                        correct++;
+                        item.style.borderColor = '#6BCF7F';
+                    } else {
+                        item.style.borderColor = '#EF476F';
+                    }
+                });
+            });
+            
+            const feedback = document.getElementById(`${unitId}-drag-feedback`);
+            feedback.className = 'feedback show';
+            if (correct === total && total > 0) {
+                feedback.className = 'feedback correct show';
+                feedback.textContent = `🎉 Perfect! You got all ${total} correct!`;
+            } else {
+                feedback.className = 'feedback incorrect show';
+                feedback.textContent = `You got ${correct} out of ${total} correct. Green is right, red needs to move!`;
+            }
+        }
+
+        // Generic Drag-Drop Reset
+        function resetGenericDragDrop(unitId) {
+            const items = document.querySelectorAll(`#${unitId}-drag-items .drag-item`);
+            const container = document.getElementById(`${unitId}-drag-items`);
+            items.forEach(item => {
+                item.style.borderColor = '#9D4EDD';
+                container.appendChild(item);
+            });
+            document.getElementById(`${unitId}-drag-feedback`).className = 'feedback';
+        }
+
+        // Fill-in-Blank Answers
+        const d11BlankAnswers = {
+            'd11-blank1': ['improve', 'Improve', 'help', 'Help'],
+            'd11-blank2': ['harm', 'Harm', 'damage', 'Damage'],
+            'd11-blank3': ['Bridges', 'bridges'],
+            'd11-blank4': ['habitats', 'Habitats', 'homes', 'Homes'],
+            'd11-blank5': ['environmental', 'Environmental'],
+            'd11-blank6': ['shelter', 'Shelter', 'protection', 'Protection'],
+            'd11-blank7': ['Construction', 'construction', 'Building', 'building'],
+            'd11-blank8': ['healthy', 'Healthy'],
+            'd11-blank9': ['sustainably', 'Sustainably', 'responsibly', 'Responsibly'],
+            'd11-blank10': ['technology', 'Technology']
+        };
+
+        const d12BlankAnswers = {
+            'd12-blank1': ['Beavers', 'beavers'],
+            'd12-blank2': ['nests', 'Nests'],
+            'd12-blank3': ['Beehives', 'beehives', 'Hives', 'hives'],
+            'd12-blank4': ['natural', 'Natural'],
+            'd12-blank5': ['anthill', 'Anthill'],
+            'd12-blank6': ['bigger', 'Bigger', 'larger', 'Larger'],
+            'd12-blank7': ['environment', 'Environment'],
+            'd12-blank8': ['Spiders', 'spiders'],
+            'd12-blank9': ['nature', 'Nature', 'animals', 'Animals'],
+            'd12-blank10': ['minimal', 'Minimal', 'little', 'Little', 'small', 'Small']
+        };
+
+        const d22BlankAnswers = {
+            'd22-blank1': ['Form', 'form'],
+            'd22-blank2': ['Function', 'function'],
+            'd22-blank3': ['connect', 'Connect', 'link', 'Link'],
+            'd22-blank4': ['form', 'Form', 'shape', 'Shape'],
+            'd22-blank5': ['function', 'Function'],
+            'd22-blank6': ['support', 'Support', 'hold', 'Hold'],
+            'd22-blank7': ['writing', 'Writing'],
+            'd22-blank8': ['liquids', 'Liquids', 'water', 'Water'],
+            'd22-blank9': ['Shape', 'shape', 'Form', 'form'],
+            'd22-blank10': ['function', 'Function', 'purpose', 'Purpose']
+        };
+
+        const d23BlankAnswers = {
+            'd23-blank1': ['Strength', 'strength'],
+            'd23-blank2': ['thicker', 'Thicker', 'wider', 'Wider'],
+            'd23-blank3': ['Steel', 'steel'],
+            'd23-blank4': ['Triangles', 'triangles', 'Triangle', 'triangle'],
+            'd23-blank5': ['load', 'Load', 'weight', 'Weight'],
+            'd23-blank6': ['materials', 'Materials'],
+            'd23-blank7': ['Beams', 'beams'],
+            'd23-blank8': ['strength', 'Strength'],
+            'd23-blank9': ['Design', 'design'],
+            'd23-blank10': ['strong', 'Strong', 'sturdy', 'Sturdy']
+        };
+
+        const d24BlankAnswers = {
+            'd24-blank1': ['Stability', 'stability', 'Balance', 'balance'],
+            'd24-blank2': ['wide', 'Wide', 'broad', 'Broad'],
+            'd24-blank3': ['Pyramids', 'pyramids', 'Pyramid', 'pyramid'],
+            'd24-blank4': ['gravity', 'Gravity'],
+            'd24-blank5': ['Balance', 'balance'],
+            'd24-blank6': ['foundations', 'Foundations', 'bases', 'Bases'],
+            'd24-blank7': ['legs', 'Legs'],
+            'd24-blank8': ['Wind', 'wind'],
+            'd24-blank9': ['fixed', 'Fixed', 'stationary', 'Stationary'],
+            'd24-blank10': ['stable', 'Stable', 'balanced', 'Balanced']
+        };
+
+        const d25BlankAnswers = {
+            'd25-blank1': ['Properties', 'properties'],
+            'd25-blank2': ['Steel', 'steel'],
+            'd25-blank3': ['Rubber', 'rubber'],
+            'd25-blank4': ['Waterproof', 'waterproof'],
+            'd25-blank5': ['Weight', 'weight'],
+            'd25-blank6': ['Plastic', 'plastic'],
+            'd25-blank7': ['Durability', 'durability'],
+            'd25-blank8': ['Concrete', 'concrete'],
+            'd25-blank9': ['materials', 'Materials'],
+            'd25-blank10': ['properties', 'Properties']
+        };
+
+        const d26BlankAnswers = {
+            'd26-blank1': ['force', 'Force'],
+            'd26-blank2': ['Gravity', 'gravity'],
+            'd26-blank3': ['Wind', 'wind'],
+            'd26-blank4': ['Compression', 'compression'],
+            'd26-blank5': ['Tension', 'tension'],
+            'd26-blank6': ['Earthquakes', 'earthquakes'],
+            'd26-blank7': ['withstand', 'Withstand', 'resist', 'Resist'],
+            'd26-blank8': ['Twisting', 'twisting'],
+            'd26-blank9': ['weight', 'Weight'],
+            'd26-blank10': ['forces', 'Forces']
+        };
+
+        const d27BlankAnswers = {
+            'd27-blank1': ['strut', 'Strut'],
+            'd27-blank2': ['tie', 'Tie', 'cable', 'Cable'],
+            'd27-blank3': ['Columns', 'columns'],
+            'd27-blank4': ['cables', 'Cables', 'ropes', 'Ropes'],
+            'd27-blank5': ['pushing', 'Pushing', 'compression', 'Compression'],
+            'd27-blank6': ['pulling', 'Pulling', 'tension', 'Tension'],
+            'd27-blank7': ['together', 'Together'],
+            'd27-blank8': ['Compression', 'compression'],
+            'd27-blank9': ['Tension', 'tension'],
+            'd27-blank10': ['structures', 'Structures', 'buildings', 'Buildings']
+        };
+
+        // Fill-in-Blank Functions for all new units
+        function checkD11FillBlanks() { checkGenericFillBlanks('d11', d11BlankAnswers); }
+        function checkD12FillBlanks() { checkGenericFillBlanks('d12', d12BlankAnswers); }
+        function checkD22FillBlanks() { checkGenericFillBlanks('d22', d22BlankAnswers); }
+        function checkD23FillBlanks() { checkGenericFillBlanks('d23', d23BlankAnswers); }
+        function checkD24FillBlanks() { checkGenericFillBlanks('d24', d24BlankAnswers); }
+        function checkD25FillBlanks() { checkGenericFillBlanks('d25', d25BlankAnswers); }
+        function checkD26FillBlanks() { checkGenericFillBlanks('d26', d26BlankAnswers); }
+        function checkD27FillBlanks() { checkGenericFillBlanks('d27', d27BlankAnswers); }
+
+        // Generic Fill-in-Blank Checker
+        function checkGenericFillBlanks(unitId, answers) {
+            let correct = 0;
+            const total = 10;
+            
+            Object.keys(answers).forEach(blankId => {
+                const input = document.getElementById(blankId);
+                const userAnswer = input.value.trim();
+                const correctAnswers = answers[blankId];
+                
+                if (correctAnswers.includes(userAnswer)) {
+                    input.style.borderColor = '#6BCF7F';
+                    input.style.backgroundColor = '#D1FAE5';
+                    correct++;
+                } else {
+                    input.style.borderColor = '#EF476F';
+                    input.style.backgroundColor = '#FEE2E2';
+                }
+            });
+            
+            const feedback = document.getElementById(`${unitId}-fillblank-feedback`);
             feedback.className = correct === total ? 'feedback correct show' : 'feedback incorrect show';
             
             if (correct === total) {
